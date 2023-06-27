@@ -1,0 +1,83 @@
+/*#region ----------------- Buttons */
+.btn {
+  font-size: 16px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  min-width: 140px;
+  box-shadow: none !important;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  z-index: 1;
+  &:hover,
+  &:focus {
+    box-shadow: none !important;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.25s;
+    border-radius: 5px;
+  }
+  .fi {
+    position: relative;
+    top: 5px;
+    font-size: 24px;
+    line-height: 0;
+  }
+}
+.icon-right {
+  .fi {
+    margin-left: 10px;
+  }
+}
+.icon-left {
+  .fi {
+    margin-right: 10px;
+  }
+}
+
+.btn-primary {
+  background: $primary;
+  color: white;
+  &:hover,
+  &:focus {
+    color: white;
+    border-color: $primary;
+    background: $primary;
+    &::before {
+      width: 100%;
+      background: rgba($color: white, $alpha: 0.7);
+      opacity: 0;
+    }
+  }
+}
+.btn-secondary {
+  background: $secondary;
+  color: white;
+  &:hover,
+  &:focus {
+    background: darken($color: $secondary, $amount: 8);
+  }
+}
+.btn-primary-outline {
+  background-color: white;
+  border-color: $primary;
+  color: $primary;
+  &:hover,
+  &:focus {
+    color: $primary;
+    border-color: $primary;
+    &::before {
+      width: 100%;
+      background: rgba($color: $primary, $alpha: 0.15);
+    }
+  }
+}
+/*#endregion -------------- Buttons */

@@ -1,0 +1,103 @@
+/*#region ----------------- Pagination */
+.mypagination {
+  padding: 12px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 0 0;
+  background-color: white;
+  border-radius: 0;
+  &.br-top {
+    border-top: 1px solid $borderColor;
+    border-radius: 0;
+    padding-top: 20px;
+  }
+  .pagination-info {
+    display: flex;
+    align-items: center;
+    span {
+      padding: 0 5px;
+      font-size: 14px;
+      font-weight: 500;
+      color: $textDark;
+    }
+  }
+  .pagination-input {
+    height: 40px;
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    width: 50px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: $textGrey;
+    margin: 0 10px;
+    background-color: white;
+    &:hover,
+    &:focus {
+      border-color: $primary;
+    }
+  }
+  .btn-pagination {
+    background-color: $primary;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    min-width: 125px;
+    display: inline-block;
+    &.prev {
+      padding: 10px 40px 10px 15px;
+      .fi {
+        right: 12px;
+        top: 11px;
+      }
+    }
+    &.next {
+      padding: 10px 15px 10px 40px;
+      .fi {
+        left: 12px;
+        top: 11px;
+      }
+    }
+    .fi {
+      font-size: 20px;
+      line-height: 0;
+      position: absolute;
+    }
+    &:hover {
+      background-color: darken($color: $primary, $amount: 9);
+      color: #fff;
+    }
+    &.disabled {
+      background-color: rgba($color: #000000, $alpha: 0.2);
+      cursor: not-allowed;
+      user-select: none;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .mypagination {
+    flex-direction: column;
+    .pagination-prev,
+    .pagination-next {
+      width: 100%;
+      text-align: center;
+    }
+    .btn-pagination {
+      max-width: 100%;
+      width: 100%;
+      &.prev {
+        margin-bottom: 10px;
+      }
+      &.next {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+/*#endregion -------------- Pagination */

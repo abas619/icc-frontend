@@ -1,0 +1,221 @@
+/*#region ----------------- Navbar */
+.myNavbar {
+  background-color: white;
+  width: 100%;
+  padding: 8px 0;
+  z-index: 120;
+  position: absolute;
+  top: 0;
+  right: 0;
+  box-shadow: $boxshadow;
+  &.transparent {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .header-inner {
+    display: grid;
+    grid-template-columns: 140px 1fr auto;
+    align-items: center;
+  }
+  .nav-logo {
+    a {
+      position: relative;
+      display: block;
+      width: 100px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .nav-menus {
+    margin-right: 20px;
+    margin-right: auto;
+    padding-left: 40px;
+    .menu-list {
+      display: flex;
+      align-items: center;
+      .link {
+        margin-left: 20px;
+        position: relative;
+        > a {
+          font-size: 15px;
+          font-weight: 500;
+          padding: 20px 0;
+          color: $textDark;
+          display: block;
+          text-transform: capitalize;
+        }
+        &:hover {
+          > a {
+            color: $primary;
+          }
+          &.have-child {
+            &::before {
+              color: $primary;
+            }
+          }
+        }
+        &.have-child {
+          padding-left: 35px;
+          margin-left: 5px;
+          &::before {
+            content: "\f25d";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: $iconFontRegular;
+            font-size: 13px;
+            color: $textSilver;
+          }
+          &:hover {
+            > ul {
+              display: block;
+              animation: swipeupsmall 0.3s ease-in-out;
+            }
+          }
+        }
+        ul {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          background-color: white;
+          box-shadow: $boxshadow;
+          border-radius: 8px;
+          width: 220px;
+          padding: 10px 0;
+        }
+        li {
+          position: relative;
+          a {
+            font-size: 15px;
+            font-weight: 500;
+            color: $textGrey;
+            display: block;
+            padding: 10px;
+            &:hover {
+              background-color: rgba($color: $primary, $alpha: 0.1);
+              color: $primary;
+            }
+          }
+          &.have-child {
+            &::before {
+              content: "\f25e";
+              position: absolute;
+              left: 10px;
+              top: 8px;
+              font-family: $iconFontRegular;
+              font-size: 18px;
+              color: $textGrey;
+            }
+            &:hover > a {
+              background-color: $borderColor;
+              color: $primary;
+              ~ ul {
+                display: block;
+              }
+            }
+          }
+          > ul {
+            display: none;
+            position: absolute;
+            right: 100%;
+            top: 0;
+            background-color: white;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: $boxshadow;
+          }
+        }
+      }
+    }
+  }
+  .nav-action {
+    @include displayFlex(flex, center, flex-end);
+  }
+  .send-request {
+    margin-left: 12px;
+  }
+  .language {
+    .btn-check {
+      &:checked {
+        + .btn {
+          background-color: $primary;
+        }
+      }
+    }
+    .btn {
+      font-size: 13px;
+      min-width: unset;
+      border-color: $primary;
+      padding: 8px 15px;
+    }
+  }
+  .mobile-links {
+    display: none;
+    .btn-mobile-menu {
+      background-color: transparent;
+      color: $textDark;
+      border: none;
+      width: 40px;
+      height: 40px;
+      padding: 0;
+      .fi {
+        font-size: 28px;
+        position: relative;
+        top: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .myNavbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    &.transparent {
+      background-color: white;
+      box-shadow: $boxshadow;
+    }
+    .header-inner {
+      grid-template-columns: 90px auto 90px;
+    }
+    .nav-menus {
+      display: none;
+    }
+    .mobile-links {
+      display: block;
+      z-index: 20;
+    }
+    .nav-logo {
+      position: relative;
+      z-index: 10;
+      a {
+        width: 80px;
+        margin: 0 auto;
+        &::before {
+          border: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .myNavbar {
+    .nav-logo {
+      text-align: right;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .myNavbar {
+    .header-inner {
+      grid-template-columns: 48px auto 48px;
+      position: relative;
+    }
+  }
+}
+/*#endregion -------------- Navbar */

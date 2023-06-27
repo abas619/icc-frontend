@@ -1,0 +1,93 @@
+/*#region ----------------- Page Header */
+.page-header {
+  .header-inner {
+    background-image: url(../images/bg/IMG_0773.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    padding: 10rem 0 5rem 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.7);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 50px;
+      background-color: $primary;
+      clip-path: polygon(100% 1%, 100% 100%, 0 100%);
+    }
+  }
+  .text-content {
+    text-align: center;
+    position: relative;
+    z-index: 20;
+    width: 850px;
+    margin: 0 auto;
+    h1 {
+      color: white;
+      margin-bottom: 20px;
+    }
+  }
+  .mybreadcrumb {
+    ol {
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    .breadcrumb-item {
+      &.active {
+        color: $primary;
+      }
+      a {
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .page-header {
+    margin-top: 82px;
+    .header-inner {
+      padding: 4rem 0;
+    }
+    .text-content {
+      width: 90%;
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .page-header {
+    .header-inner {
+      padding: 3rem 0;
+    }
+    .text-content {
+      h1 {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .page-header {
+    margin-top: 75px;
+    .text-content {
+      h1 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+/*#region ----------------- Page Header */
