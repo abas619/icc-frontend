@@ -48,12 +48,90 @@
   }
 }
 
+.card-course {
+  margin-bottom: 15px;
+  .card-inner {
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid $borderColor;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 160px auto;
+  }
+  .thumb {
+    @include imgContainer(160px, 2px);
+  }
+  .info {
+    padding-right: 15px;
+    padding-top: 5px;
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: $textDark;
+      a {
+        display: block;
+        color: $textDark;
+      }
+      &:hover {
+        a {
+          color: $primary;
+        }
+      }
+    }
+    ul {
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        color: $textDark;
+        margin: 5px 0;
+        .fi {
+          font-size: 17px;
+          color: $textSilver;
+          margin-left: 5px;
+          position: relative;
+          top: 4px;
+        }
+        span {
+          color: $textGrey;
+        }
+      }
+    }
+  }
+  .download-link {
+    text-align: left;
+    margin-top: 10px;
+    .btn-primary {
+      padding: 0.4rem 1rem;
+      min-width: unset;
+      font-size: 13px;
+      .fi {
+        font-size: 16px;
+        top: 3px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1400px) {
 }
 @media (max-width: 1199px) {
-  .card-services {
+  .card-course {
+    .card-inner {
+      grid-template-columns: 120px auto;
+    }
     .thumb {
-      height: 250px;
+      height: 120px;
+    }
+    .info {
+      h3 {
+        font-size: 14px;
+      }
+      ul li {
+        font-size: 13px;
+        .fi {
+          font-size: 15px;
+        }
+      }
     }
   }
 }
@@ -66,6 +144,14 @@
       h3 {
         font-size: 14px;
       }
+    }
+  }
+  .card-course {
+    .card-inner {
+      grid-template-columns: 140px auto;
+    }
+    .thumb {
+      height: 140px;
     }
   }
 }
@@ -82,6 +168,26 @@
       }
       h3 {
         font-size: 13px;
+      }
+    }
+  }
+  .card-course {
+    .card-inner {
+      grid-template-columns: 100%;
+    }
+    .thumb {
+      height: 200px;
+    }
+    .info {
+      padding: 10px 0 0 0;
+      h3 {
+        font-size: 13px;
+      }
+      ul li {
+        font-size: 12px;
+        .fi {
+          font-size: 14px;
+        }
       }
     }
   }

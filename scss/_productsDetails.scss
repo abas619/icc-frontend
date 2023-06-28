@@ -1,0 +1,562 @@
+/*#region ----------------- Product Details */
+.product-details-section {
+  margin: 84px 0 7rem 0;
+  .course-bg-image {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 300px;
+    @include displayFlex(flex, flex-end, flex-start);
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      @include gradient(180deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+    }
+    .course-name {
+      width: 100%;
+      position: relative;
+      padding-bottom: 20px;
+      width: calc(100% - 370px);
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: white;
+        line-height: 34px;
+      }
+      .information {
+        @include displayFlex(flex, center, space-between);
+        ul {
+          @include displayFlex(flex, center, flex-start);
+          .item {
+            color: white;
+            opacity: 0.9;
+            margin-left: 30px;
+            font-size: 14px;
+            &:last-child {
+              margin-left: 0;
+            }
+            .fi {
+              margin-left: 5px;
+              position: relative;
+              top: 3px;
+              color: white;
+              opacity: 0.8;
+            }
+          }
+        }
+        .add-bookmark {
+          @include displayFlex(flex, center, flex-end);
+        }
+        .btn-primary {
+          padding: 3px 15px;
+          height: 40px;
+          font-size: 14px;
+          background: rgba($color: white, $alpha: 0.2);
+          .fi {
+            margin-left: 8px;
+            font-size: 16px;
+            position: relative;
+            top: 3px;
+          }
+          &:hover {
+            background-color: rgba($color: white, $alpha: 0.4);
+          }
+        }
+      }
+    }
+  }
+  .section-inner {
+    display: grid;
+    grid-template-columns: auto 350px;
+    position: relative;
+  }
+  .main-info {
+    margin-top: 2.5rem;
+    .info-inner {
+      padding-left: 40px;
+    }
+  }
+  .title-details {
+    font-size: 18px;
+    font-weight: 600;
+    color: $textDark;
+    margin-bottom: 1.2rem;
+    .fi {
+      margin-left: 15px;
+      position: relative;
+      top: 4px;
+      font-size: 22px;
+      color: $primary;
+    }
+  }
+  .video-preview {
+    margin: 2rem 0;
+    video,
+    iframe {
+      width: 100% !important;
+      border-radius: 2px !important;
+      display: inline-block;
+    }
+  }
+  .description {
+    p {
+      font-size: 14px;
+      font-weight: 300;
+      text-align: justify;
+    }
+  }
+  .topics {
+    margin-top: 2rem;
+  }
+  .collapses-gorup {
+    margin-top: 1.5rem;
+    .collapse-item {
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      background: white;
+      border: 1px solid $borderColor;
+      border-radius: 2px 2px 0 0;
+      display: grid;
+      grid-template-columns: 48px auto;
+      align-items: center;
+      padding: 5px;
+      height: 55px;
+      width: 100%;
+      text-align: right;
+      font-size: 15px;
+      &:hover,
+      &:focus {
+        box-shadow: none !important;
+      }
+      .icon {
+        width: 45px;
+        height: 100%;
+        position: relative;
+        border-radius: 2px;
+        background-color: rgba($color: $primary, $alpha: 0.1);
+        @include displayFlex(flex, center, center);
+        &::before {
+          content: "\f4c8";
+          position: absolute;
+          top: 50%;
+          right: 50%;
+          transform: translate(50%, -50%);
+          font-size: 24px;
+          font-family: $iconFontRegular;
+          color: $primary;
+        }
+      }
+      .name {
+        padding-right: 20px;
+        color: $textGrey;
+      }
+      &.collapsed {
+        border-radius: 2px;
+        .icon {
+          &::before {
+            content: "\f53a" !important;
+          }
+        }
+      }
+    }
+    .card {
+      padding: 1rem 5rem 1rem 1rem;
+      border: 1px solid $borderColor;
+      border-radius: 0 0 2px 2px;
+      margin-top: -1px;
+      ul {
+        li {
+          font-size: 16px;
+          margin-top: 15px;
+          &:first-child {
+            margin-top: 0;
+          }
+          .fi {
+            font-size: 14px;
+            position: relative;
+            top: 3px;
+            margin-left: 10px;
+            color: $textSilver;
+          }
+        }
+      }
+    }
+  }
+  .comments-section {
+    margin-top: 3rem;
+    box-shadow: none;
+    border: 1px solid $borderColor;
+    background-color: white;
+  }
+  .side-info {
+    margin-top: -75px;
+    .info-inner {
+      position: sticky;
+      top: 40px;
+      background-color: white;
+      border: 1px solid $borderColor;
+      padding: 20px;
+      border-radius: 2px;
+    }
+  }
+  .price-content {
+    @include displayFlex(flex, center, center);
+    flex-direction: column;
+    .real {
+      font-size: 24px;
+      font-weight: 800;
+      color: $textDark;
+    }
+    .toman {
+      font-size: 15px;
+      font-weight: 500;
+      color: $textGrey;
+      margin-right: 10px;
+    }
+    .discount {
+      font-size: 18px;
+      font-weight: 500;
+      text-decoration: line-through;
+      color: $textSilver;
+    }
+    .badge-off {
+      background-color: red;
+      display: inline-block;
+      color: white;
+      font-size: 16px;
+      padding: 3px 8px 1px 8px;
+      border-radius: 30px;
+      margin-right: 15px;
+    }
+    .btn-primary {
+      width: 100%;
+      margin-top: 1.2rem;
+    }
+  }
+  .property {
+    margin: 1rem 0;
+    ul {
+      display: grid;
+      grid-template-columns: 33.33% 33.33% 33.33%;
+      align-items: center;
+    }
+    li {
+      padding: 5px;
+      .prt-inner {
+        @include displayFlex(flex, center, center);
+        flex-direction: column;
+        background-color: rgba($color: $primary, $alpha: 0.1);
+        padding: 15px 10px 10px 10px;
+        border-radius: 10px;
+      }
+      .icon {
+        font-size: 26px;
+        line-height: 0 !important;
+        margin-bottom: 10px;
+        color: $primary;
+      }
+      .text {
+        font-size: 20px;
+        font-weight: 800;
+        color: $primary;
+        small {
+          font-size: 13px;
+          font-weight: 400;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
+  .course-info-list {
+    margin-top: 2rem;
+    h4 {
+      font-size: 17px;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    ul {
+      li {
+        @include displayFlex(flex, center, space-between);
+        padding: 10px 0;
+        font-size: 14px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 22px;
+          right: 0;
+          width: 100%;
+          height: 1px;
+          border: 1px dashed $borderColor;
+          z-index: -1;
+        }
+      }
+      .name {
+        background-color: white;
+        padding-left: 10px;
+        color: $textDark;
+      }
+      .desc {
+        background-color: white;
+        padding-right: 10px;
+        color: $textGrey;
+        font-weight: 600;
+      }
+      a {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.mobile-payment-navbar {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  z-index: 889;
+  display: none;
+  box-shadow: 0 -3px 15px rgba($color: $textDark, $alpha: 0.1);
+  .nav-inner {
+    @include displayFlex(flex, center, space-between);
+    padding: 8px 30px;
+  }
+  .price-content {
+    @include displayFlex(flex, center, center);
+    flex-direction: column;
+    .real {
+      font-size: 18px;
+      font-weight: 800;
+      color: $textDark;
+    }
+    .toman {
+      font-size: 14px;
+      font-weight: 500;
+      color: $textGrey;
+      margin-right: 10px;
+    }
+    .discount {
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: line-through;
+      color: $textSilver;
+    }
+    .badge-off {
+      background-color: red;
+      display: inline-block;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 3px 8px 1px 8px;
+      border-radius: 30px;
+      margin-right: 15px;
+    }
+    .btn-primary {
+      width: 100%;
+      margin-top: 1.2rem;
+    }
+  }
+  .pay {
+    .btn-primary {
+      min-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+}
+@media (max-width: 1199px) {
+  .product-details-section {
+    .course-bg-image {
+      .course-name {
+        width: calc(100% - 310px);
+      }
+    }
+    .section-inner {
+      grid-template-columns: auto 300px;
+    }
+    .property li {
+      .icon {
+        font-size: 22px;
+        margin-bottom: 8px;
+      }
+      .text {
+        font-size: 15px;
+        small {
+          font-size: 11px;
+        }
+      }
+    }
+    .course-info-list ul li {
+      font-size: 13px;
+      &::before {
+        top: 20px;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .product-details-section {
+    margin: 75px 0 7rem 0;
+    .course-bg-image {
+      min-height: 250px;
+      .course-name {
+        width: 100%;
+        h2 {
+          font-size: 18px;
+        }
+      }
+    }
+    .section-inner {
+      grid-template-columns: 100%;
+    }
+    .main-info {
+      order: 2;
+      .info-inner {
+        padding-left: 0;
+      }
+    }
+    .side-info {
+      order: 1;
+      margin-top: 20px;
+      .info-inner {
+        box-shadow: none;
+        border: 1px solid $borderColor;
+      }
+    }
+    .course-info-list {
+      margin-top: 0;
+      ul li {
+        font-size: 14px;
+        padding: 8px 0;
+        &::before {
+          top: 20px;
+        }
+      }
+    }
+    .property,
+    .price-content {
+      display: none;
+    }
+    .video-preview .video-inner {
+      width: 550px;
+      margin: 0 auto;
+    }
+  }
+  .mobile-payment-navbar {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-details-section {
+    .course-info-list {
+      h4 {
+        font-size: 16px;
+      }
+    }
+    .course-bg-image {
+      .course-name {
+        h2 {
+          font-size: 16px;
+        }
+        .information {
+          ul .item {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .product-details-section {
+    margin: 60px 0 7rem 0;
+    .course-bg-image {
+      .course-name {
+        padding: 100px 20px 20px 20px;
+        h2 {
+          font-size: 18px;
+        }
+        .information {
+          flex-direction: column;
+          ul,
+          .add-bookmark {
+            width: 100%;
+          }
+          ul {
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+    .course-info-list {
+      h4 {
+        font-size: 14px;
+        margin-bottom: 0.5rem;
+      }
+      ul li {
+        font-size: 13px;
+        padding: 5px 0;
+        &::before {
+          top: 16px;
+        }
+      }
+    }
+    .description,
+    .topics {
+      h4 {
+        font-size: 16px;
+        margin-bottom: 1rem;
+        .fi {
+          font-size: 20px;
+        }
+      }
+    }
+    .description {
+      p {
+        font-size: 14px;
+      }
+    }
+    .video-preview .video-inner {
+      width: 100%;
+    }
+    .collapses-gorup {
+      .btn-primary {
+        height: 50px;
+        font-size: 13px;
+        .icon {
+          width: 40px;
+        }
+        .name {
+          padding-right: 10px;
+        }
+      }
+      .card {
+        padding-right: 4rem;
+        ul li {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .mobile-payment-navbar {
+    .pay {
+      padding-left: 40px;
+      width: 60%;
+      flex: 0 0 60%;
+      .btn-primary {
+        min-width: 100%;
+      }
+    }
+  }
+}
+
+/*#endregion -------------- Product Details */
