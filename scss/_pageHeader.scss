@@ -1,12 +1,16 @@
 /*#region ----------------- Page Header */
 .page-header {
+  margin-top: 91px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  &.education {
+    background-image: url(../images/page-header-education.jpg);
+  }
   .header-inner {
-    background-image: url(../images/bg/IMG_0773.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background: linear-gradient(90deg, rgba(0, 125, 223, 0.6), #1297ff);
     position: relative;
-    padding: 10rem 0 5rem 0;
+    padding: 6rem 0;
     &::before {
       content: "";
       position: absolute;
@@ -14,28 +18,21 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba($color: #000000, $alpha: 0.7);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 50px;
-      background-color: $primary;
-      clip-path: polygon(100% 1%, 100% 100%, 0 100%);
+      background-image: url(../images/web-header.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      opacity: 0.2;
     }
   }
   .text-content {
-    text-align: center;
+    text-align: right;
     position: relative;
     z-index: 20;
-    width: 850px;
-    margin: 0 auto;
     h1 {
       color: white;
-      margin-bottom: 20px;
+      margin-bottom: 0;
+      font-size: 24px;
     }
   }
   .mybreadcrumb {
@@ -56,14 +53,15 @@
 
 @media (max-width: 992px) {
   .page-header {
-    margin-top: 82px;
+    margin-top: 76px;
     .header-inner {
-      padding: 4rem 0;
+      // padding: 4rem 0;
+      padding: 5rem 0;
     }
     .text-content {
-      width: 90%;
+      // width: 90%;
       h1 {
-        font-size: 2rem;
+        font-size: 22px;
       }
     }
   }
@@ -71,18 +69,17 @@
 @media (max-width: 768px) {
   .page-header {
     .header-inner {
-      padding: 3rem 0;
+      padding: 4rem;
     }
     .text-content {
       h1 {
-        font-size: 1.6rem;
+        font-size: 20px;
       }
     }
   }
 }
 @media (max-width: 575px) {
   .page-header {
-    margin-top: 75px;
     .text-content {
       h1 {
         font-size: 1.2rem;

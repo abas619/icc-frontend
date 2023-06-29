@@ -1,21 +1,21 @@
 /*#region ----------------- Products List */
 #products-section {
-  padding-top: 130px;
+  padding-top: 50px;
   position: relative;
-  &::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0px;
-    width: 100%;
-    height: 300px;
-    background-image: url(../images/line-wave.png);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
-    opacity: 0.2;
-    z-index: -1;
-  }
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   right: 0;
+  //   top: 0px;
+  //   width: 100%;
+  //   height: 300px;
+  //   background-image: url(../images/line-wave.png);
+  //   background-repeat: no-repeat;
+  //   background-size: 100%;
+  //   background-position: center center;
+  //   opacity: 0.2;
+  //   z-index: -1;
+  // }
   .list-container {
     margin-bottom: 4rem;
     .myrow {
@@ -61,7 +61,7 @@
       background-color: white;
       padding: 20px;
       border-radius: 2px;
-      border: 1px solid $borderColor;
+      // border: 1px solid $borderColor;
       .btn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -112,10 +112,9 @@
     .btn-sort,
     .btn-advanced-search {
       @include displayFlex(none, center, center);
-
-      padding: 0.5rem 1rem;
-      border-radius: 50px;
-      font-size: 12px;
+      padding: 0.7rem 1rem;
+      border-radius: 2px;
+      font-size: 13px;
       font-weight: 400;
       color: $textGrey;
       cursor: pointer;
@@ -174,7 +173,7 @@
   padding: 20px 15px 10px;
   border-radius: 2px;
   margin-bottom: 10px;
-  border: 1px solid $borderColor;
+  // border: 1px solid $borderColor;
   .box-header {
     display: flex;
     align-items: center;
@@ -563,15 +562,9 @@
   }
 }
 
-@media (max-width: 1199px) {
-  #products-section {
-    .products-list {
-    }
-  }
-}
 @media (max-width: 992px) {
   #products-section {
-    padding-top: 100px;
+    padding-top: 20px;
     .products-side {
       position: fixed;
       top: 0;
@@ -626,17 +619,8 @@
     display: block;
   }
 }
-@media (max-width: 768px) {
-  #products-section {
-    .products-list {
-    }
-  }
-}
+
 @media (max-width: 575px) {
-  #products-section {
-    .products-list {
-    }
-  }
   .payment-over {
     .inner {
       flex-direction: column;
@@ -674,8 +658,6 @@
       .btn-sort {
         width: 100%;
       }
-    }
-    .products-list {
     }
   }
 }
