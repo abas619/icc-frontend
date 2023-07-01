@@ -424,8 +424,30 @@
     }
     .see-more {
       text-align: left;
+      @include displayFlex(flex, center, space-between);
       .btn-primary-outline {
         font-size: 13px;
+      }
+      .category {
+        h6 {
+          font-size: 13px;
+          font-weight: 400;
+          color: $textGrey;
+          .fi {
+            margin-left: 5px;
+            font-size: 15px;
+            position: relative;
+            top: 3px;
+          }
+        }
+        a {
+          font-size: 13px;
+          font-weight: 400;
+          color: $textDark;
+          &:hover {
+            color: $primary;
+          }
+        }
       }
     }
   }
@@ -452,6 +474,83 @@
       font-weight: 500;
       color: $textDark;
       @include textTruncate(2);
+    }
+  }
+}
+
+.blogs-details-section {
+  background-color: white;
+  padding: 30px;
+  .name {
+    margin-bottom: 1rem;
+    h2 {
+      font-size: 18px;
+      color: $textDark;
+      margin-bottom: 12px;
+      line-height: normal;
+    }
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        font-size: 13px;
+        font-weight: 400;
+        margin: 5px 0 5px 25px;
+        .fi {
+          font-size: 16px;
+          margin-left: 5px;
+          position: relative;
+          top: 3px;
+          color: $textGrey;
+        }
+        a {
+          color: $primary;
+          text-decoration: underline 1px dashed $primary !important;
+        }
+      }
+    }
+  }
+  .thumb {
+    @include imgContainer(400px, 0);
+  }
+  .description {
+    margin-top: 2rem;
+    .mini-title {
+      background-color: rgba($color: $primary, $alpha: 0.1);
+      padding: 15px;
+      border-right: 4px solid $primary;
+      margin-bottom: 1rem;
+      h6 {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 0;
+        text-align: justify;
+      }
+    }
+    p {
+      font-size: 15px;
+      font-weight: 400;
+      color: $textDark;
+      text-align: justify;
+    }
+    ul {
+      padding-right: 30px;
+      list-style: disc;
+      margin-bottom: 1rem;
+      li {
+        font-size: 14px;
+        font-weight: 400;
+        margin: 8px 0;
+        color: $textGrey;
+      }
+    }
+    .link {
+      a {
+        font-size: 14px;
+        font-weight: 400;
+        color: $primary;
+        text-decoration: underline 1px dashed $primary !important;
+      }
     }
   }
 }
@@ -545,8 +644,42 @@
     .card-inner {
       grid-template-columns: 200px auto;
     }
+    .info {
+      .desc {
+        -webkit-line-clamp: 1;
+        min-height: unset;
+      }
+      .see-more {
+        flex-direction: column;
+        .category {
+          flex: 0 0 100%;
+          width: 100%;
+          text-align: right;
+        }
+        .btn-primary-outline {
+          margin-right: auto;
+        }
+      }
+    }
+  }
+  .blogs-details-section {
     .thumb {
-      height: 130px;
+      height: 300px;
+    }
+    .name {
+      h2 {
+        font-size: 17px;
+      }
+    }
+    .description {
+      .mini-title {
+        h6 {
+          font-size: 14px;
+        }
+      }
+      p {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -594,13 +727,24 @@
       .desc {
         font-size: 12px;
       }
-    }
-    .see-more {
-      .btn-primary-outline {
-        min-width: unset;
-        padding: 0.5rem 1rem;
+      .see-more {
+        .btn-primary-outline {
+          min-width: unset;
+          padding: 0.5rem 1rem;
+        }
+        .category {
+          h6 {
+            font-size: 12px;
+          }
+          a {
+            font-size: 12px;
+          }
+        }
       }
     }
+  }
+  .blogs-details-section {
+    padding: 25px;
   }
 }
 @media (max-width: 768px) {
@@ -609,6 +753,38 @@
       .text-content {
         h2 {
           font-size: 14px;
+        }
+      }
+    }
+  }
+  .blogs-details-section {
+    padding: 20px;
+    .thumb {
+      height: 250px;
+    }
+    .name {
+      h2 {
+        font-size: 16px;
+      }
+    }
+    .description {
+      .mini-title {
+        h6 {
+          font-size: 13px;
+        }
+      }
+      p {
+        font-size: 13px;
+      }
+      ul {
+        li {
+          font-size: 12px;
+          margin: 5px 0;
+        }
+      }
+      .link {
+        a {
+          font-size: 13px;
         }
       }
     }
@@ -693,6 +869,9 @@
     .info {
       padding: 10px;
     }
+  }
+  .blogs-details-section {
+    padding: 15px;
   }
 }
 /*#endregion -------------- Blogs */
