@@ -1,0 +1,147 @@
+/*#region ----------------- Committee Members */
+.committee-members {
+  margin: 0 0 80px 0;
+  &.have-bg {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 360px;
+      background-image: url(../images/dots-wave.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center left;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  }
+}
+
+.card-member {
+  .card-inner {
+    background-color: white;
+    padding: 20px;
+  }
+  .thumb {
+    @include imgContainer(120px, 100px);
+    width: 120px;
+    margin: 0 auto;
+  }
+  .info {
+    margin-top: 1rem;
+    text-align: center;
+    .name {
+      font-size: 14px;
+      font-weight: 600;
+      color: $textDark;
+    }
+    .position {
+      font-size: 13px;
+      font-weight: 400;
+      color: $textGrey;
+      min-height: 38px;
+      @include textTruncate(2);
+      a {
+        text-decoration: underline 1px dashed $primary !important;
+      }
+    }
+    .desc {
+      font-size: 13px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+  }
+}
+
+.mini-title {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  .fi {
+    font-size: 22px;
+    margin-left: 10px;
+    color: $textGrey;
+    position: relative;
+    top: 4px;
+  }
+}
+
+.personal-info-header {
+  background-color: white;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 200px auto;
+  .thumb {
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    padding: 10px 30px 10px 10px;
+    ul {
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        color: $textGrey;
+        margin-bottom: 10px;
+        span {
+          color: $textDark;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+.personal-info-body {
+  padding: 40px;
+  background-color: white;
+  .description {
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+    p,
+    ul,
+    ol {
+      padding-right: 30px;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ul li,
+    ol li,
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      span {
+        color: $textGrey;
+        margin-left: 5px;
+      }
+    }
+    ul li,
+    ol li {
+      margin: 8px 0;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .card-member {
+    .thumb {
+      height: 100px;
+      width: 100px;
+    }
+    .info {
+      .name {
+        font-size: 13px;
+      }
+      .position {
+        font-size: 12px;
+        min-height: 34px;
+      }
+    }
+  }
+}
+/*#endregion -------------- Committee Members */

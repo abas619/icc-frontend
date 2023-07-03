@@ -1,0 +1,44 @@
+/*#region ----------------- Tabs */
+.nav-tabs {
+  border: none;
+  .nav-link {
+    background-color: white;
+    border-radius: 0;
+    font-size: 15px;
+    font-weight: 400;
+    color: $textGrey;
+    padding: 1rem 2rem;
+    &:hover {
+      background-color: rgba($color: $primary, $alpha: 0.1);
+      color: $primary;
+    }
+    &.active {
+      background-color: $primary;
+      color: white;
+    }
+  }
+}
+.tab-content {
+  .tab-inner {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-tabs {
+    .nav-link {
+      font-size: 14px;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .nav-tabs {
+    .nav-link {
+      font-size: 13px;
+      padding: 0.6rem 1rem;
+      flex-grow: 1;
+    }
+  }
+}
+/*#endregion -------------- Tabs */

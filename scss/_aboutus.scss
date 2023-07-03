@@ -1,8 +1,55 @@
 /*#region ----------------- About Us */
-
+.aboutus-section {
+  margin: 50px 0 80px 0;
+  .section-inner {
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 40px;
+  }
+  .description {
+    margin-top: 1.5rem;
+    p {
+      font-weight: 400;
+      text-align: justify;
+    }
+  }
+  .btns-group {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
 @media (max-width: 992px) {
+  .aboutus-section {
+    .section-inner {
+      padding: 30px;
+    }
+    .description {
+      p {
+        font-size: 14px;
+        line-height: 23px;
+      }
+    }
+  }
 }
 @media (max-width: 768px) {
+  .aboutus-section {
+    .section-inner {
+      padding: 25px;
+    }
+  }
+}
+@media (max-width: 575px) {
+  .aboutus-section {
+    .section-inner {
+      padding: 20px;
+    }
+    .description {
+      p {
+        font-size: 13px;
+        line-height: 21px;
+      }
+    }
+  }
 }
 
 /*#endregion -------------- About Us */
