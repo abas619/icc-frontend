@@ -8,9 +8,47 @@
   }
   .description {
     margin-top: 1.5rem;
+    p,
+    ul,
+    ol {
+      margin-bottom: 16px;
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+    ul li,
+    ol li,
     p {
+      font-size: 16px;
       font-weight: 400;
+      color: $textDark;
       text-align: justify;
+      span {
+        color: $textGrey;
+        margin-left: 5px;
+      }
+    }
+    ul li,
+    ol li {
+      margin: 8px 0;
+    }
+    ul {
+      list-style: disc;
+      padding-right: 30px;
+    }
+  }
+  .item-link {
+    background-color: $background;
+    padding: 15px;
+    @include displayFlex(flex, center, space-between);
+    flex-wrap: wrap;
+    margin-top: 15px;
+    h6 {
+      margin-bottom: 0;
+    }
+    .btn-primary {
+      padding: 0.4rem 1rem;
+      font-size: 14px;
     }
   }
   .btns-group {
@@ -18,6 +56,31 @@
     margin-top: 2rem;
   }
 }
+
+.company-info {
+  display: grid;
+  grid-template-columns: 150px auto;
+  .thumb {
+    img {
+      width: 100%;
+    }
+  }
+  .data {
+    padding-right: 20px;
+    ul {
+      li {
+        font-size: 16px;
+        font-weight: 400;
+        color: $textDark;
+        margin: 10px 0;
+        span {
+          color: $textGrey;
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: 992px) {
   .aboutus-section {
     .section-inner {
@@ -30,11 +93,36 @@
       }
     }
   }
+  .company-info {
+    grid-template-columns: 110px auto;
+    .data {
+      padding-right: 15px;
+      ul {
+        li {
+          font-size: 14px;
+        }
+      }
+    }
+  }
 }
 @media (max-width: 768px) {
   .aboutus-section {
     .section-inner {
       padding: 25px;
+    }
+    .item-link {
+      flex-direction: column;
+      justify-content: flex-start;
+      h6 {
+        flex: 0 0 100%;
+        width: 100%;
+        text-align: right;
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+      .btn-primary {
+        margin-right: auto;
+      }
     }
   }
 }
@@ -47,6 +135,17 @@
       p {
         font-size: 13px;
         line-height: 21px;
+      }
+    }
+  }
+  .company-info {
+    grid-template-columns: 90px auto;
+    .data {
+      padding-right: 12px;
+      ul {
+        li {
+          font-size: 13px;
+        }
       }
     }
   }

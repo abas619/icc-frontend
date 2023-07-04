@@ -4105,7 +4105,7 @@ input[type=number] {
 }
 @media (max-width: 768px) {
   .page-header .header-inner {
-    padding: 4rem;
+    padding: 4rem 0;
   }
   .page-header .text-content h1 {
     font-size: 20px;
@@ -4398,13 +4398,77 @@ input[type=number] {
 .aboutus-section .description {
   margin-top: 1.5rem;
 }
+.aboutus-section .description p,
+.aboutus-section .description ul,
+.aboutus-section .description ol {
+  margin-bottom: 16px;
+}
+.aboutus-section .description p:last-child,
+.aboutus-section .description ul:last-child,
+.aboutus-section .description ol:last-child {
+  margin-bottom: 0 !important;
+}
+.aboutus-section .description ul li,
+.aboutus-section .description ol li,
 .aboutus-section .description p {
+  font-size: 16px;
   font-weight: 400;
+  color: #414756;
   text-align: justify;
+}
+.aboutus-section .description ul li span,
+.aboutus-section .description ol li span,
+.aboutus-section .description p span {
+  color: #7a7e88;
+  margin-left: 5px;
+}
+.aboutus-section .description ul li,
+.aboutus-section .description ol li {
+  margin: 8px 0;
+}
+.aboutus-section .description ul {
+  list-style: disc;
+  padding-right: 30px;
+}
+.aboutus-section .item-link {
+  background-color: #f5f9ff;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+.aboutus-section .item-link h6 {
+  margin-bottom: 0;
+}
+.aboutus-section .item-link .btn-primary {
+  padding: 0.4rem 1rem;
+  font-size: 14px;
 }
 .aboutus-section .btns-group {
   text-align: center;
   margin-top: 2rem;
+}
+
+.company-info {
+  display: grid;
+  grid-template-columns: 150px auto;
+}
+.company-info .thumb img {
+  width: 100%;
+}
+.company-info .data {
+  padding-right: 20px;
+}
+.company-info .data ul li {
+  font-size: 16px;
+  font-weight: 400;
+  color: #414756;
+  margin: 10px 0;
+}
+.company-info .data ul li span {
+  color: #7a7e88;
 }
 
 @media (max-width: 992px) {
@@ -4415,10 +4479,33 @@ input[type=number] {
     font-size: 14px;
     line-height: 23px;
   }
+  .company-info {
+    grid-template-columns: 110px auto;
+  }
+  .company-info .data {
+    padding-right: 15px;
+  }
+  .company-info .data ul li {
+    font-size: 14px;
+  }
 }
 @media (max-width: 768px) {
   .aboutus-section .section-inner {
     padding: 25px;
+  }
+  .aboutus-section .item-link {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .aboutus-section .item-link h6 {
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: right;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .aboutus-section .item-link .btn-primary {
+    margin-right: auto;
   }
 }
 @media (max-width: 575px) {
@@ -4428,6 +4515,15 @@ input[type=number] {
   .aboutus-section .description p {
     font-size: 13px;
     line-height: 21px;
+  }
+  .company-info {
+    grid-template-columns: 90px auto;
+  }
+  .company-info .data {
+    padding-right: 12px;
+  }
+  .company-info .data ul li {
+    font-size: 13px;
   }
 }
 /*#endregion -------------- About Us */
