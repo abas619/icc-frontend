@@ -1,0 +1,1042 @@
+/*#region ----------------- User Profile */
+.user-dashboard-section {
+  margin: 130px 0 80px 0;
+  .grid-layout {
+    display: grid;
+    grid-template-columns: 320px auto;
+  }
+  .grid-user-menu {
+    transition: all 0.2s ease-in-out;
+    .grid-inner {
+      border-radius: 0;
+      position: sticky;
+      top: 40px;
+      background-color: white;
+      border: 1px solid $borderColor;
+    }
+  }
+  .grid-main {
+    padding-right: 20px;
+    .grid-inner {
+      border-radius: 0;
+      background-color: white;
+      border: 1px solid $borderColor;
+    }
+  }
+  .user-image {
+    padding: 30px 15px 15px 15px;
+    display: grid;
+    grid-template-columns: 70px auto;
+    align-items: center;
+    .img-inner {
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+    .user-name {
+      padding-right: 12px;
+      font-size: 16px;
+      font-weight: 500;
+      color: $textGrey;
+    }
+  }
+  .user-menu {
+    padding: 20px 0;
+    position: relative;
+    border-top: 1px solid $borderColor;
+    .btn-collape,
+    .sub-btn-collape {
+      font-size: 16px;
+      font-weight: 400;
+      color: $textGrey;
+      @include displayFlex(flex, center, flex-start);
+      padding: 12px 30px;
+      position: relative;
+      width: 100%;
+      transition: all 0.2s ease-in;
+      .fi {
+        font-size: 20px;
+        margin-left: 10px;
+        color: $textSilver;
+        transition: all 0.2s ease-in;
+      }
+      &.dropdown {
+        &::before {
+          content: "\f10d";
+          font-family: $iconFontRegular;
+          position: absolute;
+          top: 10px;
+          left: 5px;
+          font-size: 12px;
+          color: $textSilver;
+          transform: rotate(0deg);
+        }
+      }
+      &.collapsed {
+        &.dropdown {
+          &::before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+      &:hover {
+        color: $primary !important;
+        .fi {
+          color: $primary;
+        }
+      }
+    }
+    .btn-collape {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        border-radius: 0;
+        background-color: transparent;
+        transform: translateY(-50%);
+      }
+    }
+    .sub-menu-list {
+      background-color: rgba($color: $textGrey, $alpha: 0.1);
+      padding: 10px 20px 10px 10px;
+      border-radius: 0;
+      .btn-collape {
+        color: $textGrey;
+      }
+    }
+    .menu-item {
+      position: relative;
+      &.active {
+        .btn-collape {
+          color: $primary !important;
+          background-color: rgba($color: $primary, $alpha: 0.1);
+          font-weight: 400;
+          &::before {
+            background-color: $primary;
+          }
+          .fi {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  .main-title {
+    @include displayFlex(flex, center, space-between);
+    padding: 20px;
+    position: relative;
+    margin-top: 0;
+    border-bottom: 1px solid $borderColor;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+    }
+    .title-inner {
+      display: grid;
+      grid-template-columns: 40px auto;
+      align-items: center;
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+      background: $primary;
+      border-radius: 50%;
+      @include displayFlex(flex, center, center);
+      color: white;
+      font-size: 18px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-right: 20px;
+      text-align: right;
+    }
+    .buttons-group {
+      .btn-primary {
+        background: $background;
+        border: 1px solid $borderColor;
+        color: $textGrey;
+        min-width: unset;
+        &:hover {
+          background: $background !important;
+          border-color: $primary !important;
+          color: $primary;
+        }
+        &.btn-fill {
+          background: $primary;
+          color: white;
+          border: none;
+          &:hover,
+          &:focus {
+            background: $secondary !important;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .main-body {
+    padding: 20px 20px 40px 20px;
+  }
+  .btns-action-main {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .empty-box {
+    padding: 60px 0;
+    text-align: center;
+    .thumb {
+      width: 140px;
+      margin: 0 auto 1rem auto;
+      img {
+        width: 100%;
+      }
+    }
+    h6 {
+      color: $textGrey;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  }
+}
+.btn-usermenu {
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  background-color: rgba($color: $primary, $alpha: 0.1);
+  border: none;
+  border-radius: 0;
+  font-size: 13px;
+  color: $primary;
+  @include displayFlex(none, center, center);
+  font-size: 20px;
+}
+.btn-closeprofileMenu {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 40px;
+  height: 40px;
+  color: $textGrey;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  @include displayFlex(none, center, center);
+  font-size: 18px;
+  border-radius: 50%;
+  color: $textSilver;
+  &:hover {
+    color: $textGrey;
+  }
+}
+.overlay-userMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1998;
+  opacity: 0;
+  transition: all 0.3s;
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+.hello-msg {
+  border-right: 5px solid $secondary;
+  padding-right: 20px;
+  h5 {
+    font-size: 16px;
+    margin-bottom: 2px;
+    color: $textDark;
+  }
+  p {
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: $textGrey;
+  }
+}
+
+.register-recipe-group {
+  @include displayFlex(flex, center, center);
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+}
+.card-register-recipe {
+  flex: 0 0 50%;
+  width: 50%;
+  &:first-child {
+    padding-left: 10px;
+    .card-inner {
+      background: $primary;
+    }
+    &:hover {
+      .card-inner {
+        box-shadow: 0 6px 30px rgba($color: $primary, $alpha: 0.4);
+      }
+    }
+  }
+  &:last-child {
+    padding-right: 10px;
+    .card-inner {
+      background: $secondary;
+    }
+    &:hover {
+      .card-inner {
+        box-shadow: 0 6px 30px rgba($color: $secondary, $alpha: 0.4);
+      }
+    }
+  }
+  .card-inner {
+    padding: 20px;
+    border-radius: 0;
+    display: grid;
+    grid-template-columns: 80px auto;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+  }
+  .thumb {
+    width: 80px;
+    height: 80px;
+    background-color: rgba($color: white, $alpha: 0.2);
+    border-radius: 0;
+    font-size: 35px;
+    @include displayFlex(flex, center, center);
+    color: white;
+  }
+  .info {
+    padding: 0 10px 0 40px;
+    h5 {
+      font-size: 18px;
+      margin-bottom: 0;
+      color: white;
+      @include textTruncate(1);
+    }
+    p {
+      margin-bottom: 0;
+      font-size: 13px;
+      color: rgba($color: white, $alpha: 0.8);
+      @include textTruncate(1);
+    }
+  }
+  .icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 34px;
+    @include displayFlex(flex, center, center);
+  }
+}
+
+.user-status {
+  @include displayFlex(flex, center, center);
+  flex-wrap: wrap;
+  .card-status {
+    flex: 1 0 33.33%;
+    width: 33.33%;
+  }
+}
+
+.card-status {
+  padding: 5px 10px;
+  &:first-child {
+    padding-right: 0;
+  }
+  &:last-child {
+    padding-left: 0;
+  }
+  .card-inner {
+    background-color: white;
+    // box-shadow: $boxshadow;
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    padding: 20px 10px 10px 10px;
+  }
+  .thumb {
+    width: 100px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+    }
+  }
+  .info {
+    margin-top: 20px;
+    text-align: center;
+    h6 {
+      color: $textGrey;
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      @include textTruncate(1);
+    }
+    h3 {
+      color: $textDark;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.notification-center {
+  background-color: white;
+  border: 1px solid $borderColor;
+  border-radius: 0;
+  margin-top: 20px;
+  padding: 30px;
+  .nav-tabs {
+    .nav-link {
+      background-color: $background;
+      &.active {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.card-notif {
+  margin-bottom: 10px;
+  .card-inner {
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    padding: 15px;
+    position: relative;
+  }
+  h6 {
+    color: $textDark;
+    padding-left: 140px;
+  }
+  .date {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 14px;
+    color: $textGrey;
+    .fi {
+      margin-left: 5px;
+      position: relative;
+      top: 2px;
+    }
+  }
+  .desc {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+  }
+  .btns-action {
+    text-align: left;
+  }
+}
+
+.card-informaion {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid $borderColor;
+  .card-inner {
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 50%;
+        width: 50%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        .name {
+          color: $textDark;
+        }
+        .desc {
+          color: $textGrey;
+          margin-right: 5px;
+          &.success {
+            color: $success;
+          }
+          &.error {
+            color: $error;
+          }
+          &.warning {
+            color: $info;
+          }
+        }
+      }
+    }
+  }
+  .c-footer {
+    text-align: left;
+    border-top: 1px solid $borderColor;
+    padding-top: 15px;
+    .button-group {
+      .btn {
+        padding: 0.4rem 0.8rem;
+      }
+    }
+  }
+}
+
+.card-class {
+  margin-bottom: 20px;
+  .card-inner {
+    background-color: white;
+    padding: 15px;
+    border-radius: 0;
+    position: relative;
+    border: 1px solid $borderColor;
+  }
+  .card-body {
+    display: grid;
+    grid-template-columns: 90px auto;
+    padding: 0 0 15px 0;
+  }
+  .teacher-image {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    .avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      position: relative;
+      z-index: 20;
+    }
+    .fade-avatar {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 15px;
+      transform: scale(0.9);
+      opacity: 0.5;
+      z-index: 1;
+      filter: blur(10px);
+    }
+  }
+  .info {
+    padding-right: 20px;
+    .teacher-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: $textDark;
+      @include textTruncate(1);
+    }
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 50%;
+        width: 50%;
+        margin-top: 8px;
+      }
+      .icon {
+        .fi {
+          font-size: 16px;
+          line-height: 0;
+          display: inline-block;
+          position: relative;
+          top: 4px;
+          color: $textSilver;
+        }
+      }
+      .text {
+        font-size: 13px;
+        font-weight: 400;
+        margin-right: 5px;
+        color: $textDark;
+        padding: 2px 5px;
+        border-radius: 3px;
+        &.bg-success {
+          background-color: $success !important;
+          color: white;
+        }
+        &.bg-error {
+          background-color: $error !important;
+          color: white;
+        }
+        &.bg-primary {
+          background-color: $primary !important;
+          color: white;
+        }
+      }
+    }
+  }
+  .c-footer {
+    @include displayFlex(flex, center, space-between);
+    border-top: 1px solid $borderColor;
+    padding-top: 15px;
+    .shenase {
+      h6 {
+        font-size: 13px;
+        font-weight: 400;
+        color: $textDark;
+        margin-bottom: 0;
+        span {
+          color: $textGrey;
+        }
+      }
+    }
+    .btn {
+      padding: 0.5rem 0.8rem;
+      font-size: 13px;
+    }
+  }
+  .dropdown {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    .btn-dropdown {
+      width: 30px;
+      height: 30px;
+      padding: 2px;
+      border-radius: 0;
+      border: none;
+      background-color: transparent;
+      .fi {
+        line-height: 0;
+        display: inline-block;
+        position: relative;
+        top: 3px;
+        font-size: 18px;
+        color: $textSilver;
+      }
+    }
+    .dropdown-menu {
+      border: none;
+      box-shadow: 0 3px 5px rgba($color: $textGrey, $alpha: 0.1);
+      border-radius: 10px;
+    }
+    .dropdown-item {
+      font-size: 13px;
+      color: $textDark;
+      .fi {
+        font-size: 18px;
+        margin-left: 10px;
+        line-height: 0;
+        position: relative;
+        top: 4px;
+        display: inline-block;
+        color: $textSilver;
+      }
+      &.red {
+        .fi {
+          color: $error;
+        }
+      }
+    }
+  }
+}
+
+.card-ticket {
+  border: 1px solid $borderColor;
+  border-radius: 0;
+  padding: 10px;
+  margin-bottom: 10px;
+  .info {
+    margin-bottom: 10px;
+    .subject {
+      font-size: 16px;
+      font-weight: 600;
+      color: $textGrey;
+      margin-bottom: 5px;
+    }
+    .date {
+      color: $textSilver;
+    }
+  }
+  .description {
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textDark;
+    }
+  }
+  &.reply {
+    border-color: $primary;
+    border-right-width: 4px;
+    background-color: rgba($color: $primary, $alpha: 0.1);
+    margin-bottom: 0;
+  }
+  .satus {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+    span {
+      border-radius: 0;
+      margin-right: auto;
+      padding: 5px 10px;
+      display: inline-block;
+    }
+    &.waiting {
+      span {
+        background-color: rgba($color: $warning, $alpha: 0.3);
+        color: $textDark;
+      }
+    }
+    &.success {
+      span {
+        background-color: rgba($color: $success, $alpha: 0.1);
+        color: $success;
+      }
+    }
+    &.error {
+      span {
+        background-color: rgba($color: $error, $alpha: 0.1);
+        color: $error;
+      }
+    }
+    &.info {
+      span {
+        background-color: rgba($color: $info, $alpha: 0.1);
+        color: $info;
+      }
+    }
+  }
+}
+
+.card-certificate {
+  background-color: white;
+  border-radius: 0;
+  margin-bottom: 20px;
+  border: 1px solid $borderColor;
+  .card-inner {
+    padding: 10px;
+    ul {
+      @include displayFlex(flex, center, flex-start);
+      flex-wrap: wrap;
+      li {
+        flex: 0 0 50%;
+        width: 50%;
+        margin-bottom: 10px;
+        font-size: 14px;
+        font-weight: 400;
+        .name {
+          color: $textDark;
+        }
+        .desc {
+          color: $textGrey;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .c-footer {
+    text-align: left;
+    border-top: 1px solid $borderColor;
+    padding: 10px;
+    .button-group {
+      .btn {
+        padding: 0.4rem 0.8rem;
+        min-width: unset;
+        font-size: 13px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .user-dashboard-section {
+    .products-list {
+      .card-course {
+        .img-container {
+          height: 170px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .user-dashboard-section {
+    margin: 120px 0 80px 0;
+    .grid-layout {
+      grid-template-columns: 280px auto;
+    }
+    .products-list {
+      .card-course,
+      .card-teacher {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+  .card-register-recipe {
+    .card-inner {
+      grid-template-columns: 60px auto;
+      padding: 15px;
+    }
+    .thumb {
+      width: 60px;
+      height: 60px;
+      font-size: 30px;
+    }
+    .info {
+      padding-left: 30px;
+      h5 {
+        font-size: 16px;
+      }
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      font-size: 24px;
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 80px;
+    }
+    .info {
+      h3 {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .user-dashboard-section {
+    margin: 100px 0 70px 0;
+    .grid-layout {
+      grid-template-columns: 100%;
+    }
+    .grid-user-menu {
+      position: fixed;
+      top: 0;
+      right: -300px;
+      width: 300px;
+      height: 100vh;
+      z-index: 1999;
+      .grid-inner {
+        position: relative;
+        top: 0;
+        z-index: 2000;
+        height: 100%;
+        overflow-y: auto;
+        transition: all 0.3s;
+        border-radius: 0;
+        border: none;
+      }
+      &.active {
+        right: 0;
+      }
+    }
+    .grid-main {
+      padding: 0;
+    }
+    .main-title {
+      border-radius: 0;
+      padding: 10px 10px 10px 15px;
+      .icon {
+        display: none;
+      }
+    }
+    .main-body {
+      border-top: none;
+      border-radius: 0;
+      padding: 15px 10px;
+    }
+  }
+  .btn-closeprofileMenu,
+  .btn-usermenu {
+    display: flex;
+  }
+  .notification-center {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-dashboard-section {
+    .products-list {
+      .card-course {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+    .main-title {
+      h3 {
+        font-size: 16px;
+      }
+      .buttons-group .btn {
+        font-size: 13px;
+      }
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 70px;
+    }
+    .info {
+      h6 {
+        font-size: 13px;
+      }
+      h3 {
+        font-size: 1.4rem;
+      }
+    }
+  }
+  .card-notif {
+    h6 {
+      font-size: 14px;
+    }
+    .desc {
+      p {
+        font-size: 13px;
+      }
+    }
+    .btns-action {
+      .btn {
+        padding: 0.5rem 1rem;
+        min-width: 100px;
+      }
+    }
+  }
+  .notification-center {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+  .user-dashboard-section {
+    .main-title {
+      margin-bottom: 0;
+      flex-direction: column;
+      .title-inner {
+        width: 100%;
+      }
+      .buttons-group {
+        width: 100%;
+        text-align: left;
+        margin-top: 15px;
+      }
+    }
+  }
+  .register-recipe-group {
+    margin: 1rem 0;
+    .card-register-recipe {
+      flex: 1 0 100%;
+      width: 100%;
+      padding: 8px 0;
+    }
+  }
+  .user-status {
+    .card-status {
+      flex: 1 0 50%;
+      width: 50%;
+      padding-bottom: 10px;
+      &:nth-child(2) {
+        padding-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+  .card-status {
+    .thumb {
+      width: 60px;
+    }
+    .info {
+      h6 {
+        font-size: 12px;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  .card-notif {
+    h6 {
+      padding-left: 0;
+    }
+    .date {
+      position: relative;
+      top: unset;
+      left: unset;
+    }
+    .btns-action {
+      .btn {
+        padding: 0.5rem 1rem;
+        min-width: 100px;
+      }
+    }
+  }
+  .notification-center {
+    padding: 10px;
+  }
+  .card-informaion {
+    .card-inner {
+      ul {
+        flex-wrap: wrap;
+        li {
+          flex: 0 0 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .card-class {
+    .card-body {
+      grid-template-columns: 70px auto;
+    }
+    .teacher-image {
+      width: 70px;
+      height: 70px;
+    }
+    .info ul li {
+      flex: 0 0 100%;
+      width: 100%;
+    }
+  }
+  .card-certificate {
+    .card-inner {
+      ul li {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  .user-dashboard-section .grid-user-menu {
+    width: 100%;
+    right: -400px;
+    .grid-inner {
+      border-radius: 0;
+    }
+  }
+  .card-class {
+    .c-footer {
+      flex-direction: column;
+      .button-group {
+        width: 100%;
+        margin-top: 10px;
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- User Profile */

@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#007ddf" />
     <meta name="msapplication-navbutton-color" content="#007ddf">
     <meta name="apple-mobile-web-app-status-bar-style" content="#007ddf">
-    <title>اتاق بازرگانی ICC | لیست اعضا</title>
+    <title>اتاق بازرگانی ICC | پنل کاربر</title>
     <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="scss/main.css">
@@ -96,79 +96,141 @@
         </div>
     </header>
 
-    <div class="page-header education">
-        <div class="header-inner">
-            <div class="container">
-                <div class="text-content">
-                    <h1>لیست اعضای کمیته ICC</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- لیست مشاوران -->
-    <div class="committee-members mt-5">
-        <div class="container">
-            <div class="section-inner">
-                <nav>
-                    <div class="nav nav-tabs justify-content-center" role="tablist">
-                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nav-home" role="tab">اعضای
-                            سازمانی</button>
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nav-profile" role="tab">اعضای
-                            انفرادی</button>
+    <!-- User Dashboard -->
+    <div class="user-dashboard-section">
+        <div class="container-lg">
+            <div class="grid-layout">
+                <div class="grid-user-menu">
+                    <div class="grid-inner">
+                        <!-- close Userprofile -->
+                        <button type="button" class="btn-closeprofileMenu"><i class="fi fi-rr-cross"></i></button>
+                        <!-- User Image -->
+                        <div class="user-image">
+                            <div class="img-inner">
+                                <img src="images/default-user.svg" alt="user-name">
+                            </div>
+                            <div class="user-name">شیده صفری</div>
+                        </div>
+                        <!-- User Menu -->
+                        <div class="user-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="user-dashboard.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>داشبورد</a></li>
+                                <li class="menu-item"><a href="user-transactions.html" class="btn-collape"><i
+                                            class="fi fi-rr-receipt"></i>لیست تراکنش‌ها</a></li>
+                                <li class="menu-item"><a href="user-cources.html" class="btn-collape"><i
+                                            class="fi fi-rr-play"></i>دوره‌های من</a></li>
+                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
+                                            class="fi fi-rr-user"></i>حساب کاربری</a></li>
+                                <li class="menu-item active">
+                                    <a href="user-tickets.html" class="btn-collape">
+                                        <i class="fi fi-rr-comment-alt"></i>
+                                        پیام‌های مدیریت
+                                        <span
+                                            class="position-absolute top-50 end-0 translate-middle badge rounded-pill bg-danger">
+                                            2+
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item"><a href="user-archives.html" class="btn-collape"><i
+                                            class="fi fi-rr-archive"></i>آرشیو مدارک و سوابق</a></li>
+                                <li class="menu-item">
+                                    <a href="#" class="btn-collape" data-bs-toggle="modal"
+                                        data-bs-target="#modal-logout">
+                                        <i class="fi fi-rr-sign-out-alt"></i>
+                                        خروج از حساب کاربری
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </nav>
-                <div class="tab-content">
-                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
-                        <div class="tab-inner">
-                            <div class="cards-list row-4">
-                                <div class="card-member">
-                                    <div class="card-inner">
-                                        <div class="thumb">
-                                            <div class="img-inner">
-                                                <img src="https://via.placeholder.com/200x200/ccc.png" alt="user-img">
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <h3 class="name">دكتر حمیدرضا مناقبی</h3>
-                                            <p class="desc">خدمات</p>
-                                            <h4 class="position">
-                                                <a href="membership-details.html">اتاق بازرگانی ایران و استرالیا</a>
-                                            </h4>
-                                        </div>
-                                    </div>
+                    <div class="overlay-userMenu"></div>
+                </div>
+                <div class="grid-main">
+                    <div class="grid-inner">
+                        <div class="main-title">
+                            <div class="title-inner">
+                                <button type="button" class="btn-usermenu"><i
+                                        class="fi fi-rr-menu-dots-vertical"></i></button>
+                                <div class="icon">
+                                    <i class="fi fi-rr-comment-alt"></i>
                                 </div>
-                                <div class="card-member">
-                                    <div class="card-inner">
-                                        <div class="thumb">
-                                            <div class="img-inner">
-                                                <img src="https://via.placeholder.com/200x200/ccc.png" alt="user-img">
-                                            </div>
-                                        </div>
-                                        <div class="info">
-                                            <h3 class="name">محمد لاهوتی</h3>
-                                            <p class="desc">خدمات</p>
-                                            <h4 class="position">
-                                                <a href="membership-details.html">اتاق بازرگانی ایران و امارت</a>
-                                            </h4>
-                                        </div>
-                                    </div>
-                                </div>
+                                <h3>پیام‌های مدیریت</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <button href="user-recipes.html" class="btn btn-primary btn-fill icon-right"
+                                    data-bs-toggle="modal" data-bs-target="#modal-sendMessage">پیام
+                                    جدید<i class="fi fi-rr-add"></i></button>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab-pane fade" id="nav-profile" role="tabpanel">
-                        <div class="tab-inner">
-                            <h6>اعضای انفرادی</h6>
+                        <div class="main-body">
+
+                            <!-- وقتی برای اولین بار میخواد ادرس ثبت کنه و خالیه -->
+                            <div class="empty-box">
+                                <div class="thumb">
+                                    <img src="images/icons/icon-status-message.svg" alt="img">
+                                </div>
+                                <h6>شما پیامی دریافت نکرده اید</h6>
+                                <button class="btn btn-primary icon-right" data-bs-toggle="modal"
+                                    data-bs-target="#modal-sendMessage"><i class="fi fi-rr-add"></i>پیام جدید</button>
+                            </div>
+
+                            <!-- وقتی پیامی دریافت کرد -->
+                            <div class="card-ticket">
+                                <div class="comment-inner">
+                                    <div class="info">
+                                        <div class="subject">عنوان پیام</div>
+                                        <span class="date">21 اسفند 1401</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                            سطرآنچنان که
+                                            لازم است، و برای شرایط </p>
+                                    </div>
+                                    <div class="card-ticket reply">
+                                        <div class="comment-inner">
+                                            <div class="info">
+                                                <div class="subject">مدیر سایت</div>
+                                                <span class="date">22 اسفند 1401</span>
+                                            </div>
+                                            <div class="description">
+                                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و
+                                                    با
+                                                    استفاده از طراحان گرافیک است، چاپگرها و متون بلکه </p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="satus info"><span>در حال بررسی</span></div>
+                                </div>
+                            </div>
+                            <div class="card-ticket">
+                                <div class="comment-inner">
+                                    <div class="info">
+                                        <div class="subject">عنوان پیام</div>
+                                        <span class="date">21 اسفند 1401</span>
+                                    </div>
+                                    <div class="description">
+                                        <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
+                                            استفاده
+                                            از
+                                            طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و
+                                            سطرآنچنان که
+                                            لازم است، و برای شرایط </p>
+                                    </div>
+                                    <div class="satus success"><span>در حال بررسی</span></div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
 
 
     <!-- Footer -->
@@ -250,6 +312,26 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Logout -->
+    <div class="modal fade" id="modal-logout" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title"><i class="fi fi-rr-sign-out-alt"></i>خروج</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="title-mini">از حساب کاربری خود خارج می‌شوید؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-primary">بله</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Scripts -->
     <script src="js/bootstrap.bundle.min.js"></script>

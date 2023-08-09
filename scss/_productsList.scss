@@ -10,7 +10,7 @@
       .products-main {
         padding-right: 25px;
         .main-inner {
-          margin-top: 1rem;
+          // margin-top: 1rem;
         }
       }
     }
@@ -47,7 +47,7 @@
       background-color: white;
       padding: 20px;
       border-radius: 2px;
-      // border: 1px solid $borderColor;
+      border: 1px solid $borderColor;
       .btn {
         width: 100%;
         padding: 0.5rem 1rem;
@@ -159,7 +159,7 @@
   padding: 20px 15px 10px;
   border-radius: 2px;
   margin-bottom: 10px;
-  // border: 1px solid $borderColor;
+  border: 1px solid $borderColor;
   .box-header {
     display: flex;
     align-items: center;

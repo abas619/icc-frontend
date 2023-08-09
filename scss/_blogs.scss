@@ -322,6 +322,7 @@
   .articles-side {
     background-color: white;
     margin-bottom: 15px;
+    border: 1px solid $borderColor;
     .title {
       font-size: 17px;
       position: relative;
@@ -373,6 +374,7 @@
     transition: all 0.2s ease-in-out;
     position: relative;
     padding: 10px;
+    border: 1px solid $borderColor;
   }
   .thumb {
     @include imgContainer(160px, 2px);
@@ -384,16 +386,16 @@
   }
   .date {
     position: absolute;
-    background-color: white;
+    background-color: $primary;
     right: 20px;
-    bottom: -5px;
+    bottom: -10px;
     font-size: 13px;
     font-weight: 300;
     padding: 6px 10px;
     box-shadow: $boxshadow;
-    color: $textDark;
+    color: white;
     .fi {
-      color: $textSilver;
+      color: rgba($color: white, $alpha: 0.8);
       margin-left: 5px;
       position: relative;
       top: 2px;
@@ -481,6 +483,7 @@
 .blogs-details-section {
   background-color: white;
   padding: 30px;
+  border: 1px solid $borderColor;
   .name {
     margin-bottom: 1rem;
     h2 {

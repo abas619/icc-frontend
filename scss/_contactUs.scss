@@ -2,7 +2,9 @@
 .address-information {
   background-color: white;
   padding: 40px 40px 30px 40px;
-  border-bottom: 1px solid $borderColor;
+  // border-bottom: 1px solid $borderColor;
+  border: 1px solid $borderColor;
+  margin-bottom: 20px;
   h4 {
     font-size: 18px;
     color: $textDark;

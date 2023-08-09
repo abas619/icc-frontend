@@ -4,6 +4,7 @@
   padding: 1.5rem;
   margin-top: 2rem;
   background-color: white;
+  border: 1px solid $borderColor;
   .comments-title {
     @include displayFlex(flex, center, space-between);
     margin-bottom: 2.5rem;
@@ -36,95 +37,95 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    .comment {
-      .comment-wrap {
-        padding-bottom: 20px;
-        border-bottom: 1px solid $borderColor;
-        .comment-info {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          .commenter-thumb {
-            height: 55px;
-            width: 55px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 1px solid $borderColor;
-          }
-          .commenter-info {
-            padding-right: 20px;
-            span {
-              display: block;
-              &.commenter-name {
-                font-size: 15px;
-                font-weight: 500;
-                color: $textDark;
-                @include textTruncate(1);
-                margin-bottom: 5px;
-              }
-              &.date {
-                font-size: 13px;
-                color: $textGrey;
-              }
+  }
+  .comment {
+    .comment-wrap {
+      padding-bottom: 20px;
+      border-bottom: 1px solid $borderColor;
+      .comment-info {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        .commenter-thumb {
+          height: 55px;
+          width: 55px;
+          border-radius: 50%;
+          overflow: hidden;
+          border: 1px solid $borderColor;
+        }
+        .commenter-info {
+          padding-right: 20px;
+          span {
+            display: block;
+            &.commenter-name {
+              font-size: 15px;
+              font-weight: 500;
+              color: $textDark;
+              @include textTruncate(1);
+              margin-bottom: 5px;
             }
-          }
-          .reply {
-            margin-right: auto;
-            .reply-button {
+            &.date {
               font-size: 13px;
-              outline: none;
-              box-shadow: none;
-              cursor: pointer;
-              text-transform: uppercase;
-              color: white;
-              background: $primary;
-              border: 1px solid transparent;
-              border-radius: 0;
-              padding: 3px 10px;
-              &:hover {
-                color: $primary;
-                border-color: $primary;
-                background-color: white;
-              }
-            }
-            .modal-body {
-              .comment-respond:before {
-                height: 0;
-                width: 0;
-              }
+              color: $textGrey;
             }
           }
         }
-        .comment-body {
-          padding-top: 15px;
-          color: $textDark;
-          p {
-            text-align: justify;
-            font-size: 14px;
-            font-weight: 400;
+        .reply {
+          margin-right: auto;
+          .reply-button {
+            font-size: 13px;
+            outline: none;
+            box-shadow: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            color: white;
+            background: $primary;
+            border: 1px solid transparent;
+            border-radius: 0;
+            padding: 3px 10px;
+            &:hover {
+              color: $primary;
+              border-color: $primary;
+              background-color: white;
+            }
+          }
+          .modal-body {
+            .comment-respond:before {
+              height: 0;
+              width: 0;
+            }
           }
         }
+      }
+      .comment-body {
+        padding-top: 15px;
+        color: $textDark;
+        p {
+          text-align: justify;
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+    }
+    .child-comment {
+      margin: 30px 40px 10px 0;
+    }
+    &:last-child {
+      .comment-wrap {
+        padding-bottom: 0;
       }
       .child-comment {
-        margin: 30px 40px 10px 0;
-      }
-      &:last-child {
-        .comment-wrap {
-          padding-bottom: 0;
-        }
-        .child-comment {
-          .comment:last-child {
-            .comment-wrap {
-              border-bottom: 1px solid $borderColor;
-              padding-bottom: 30px;
-            }
+        .comment:last-child {
+          .comment-wrap {
+            border-bottom: 1px solid $borderColor;
+            padding-bottom: 30px;
           }
         }
       }
     }
-    .comment + .comment {
-      margin-top: 30px;
-    }
+  }
+  .comment + .comment {
+    margin-top: 30px;
   }
   .view-all {
     margin-top: 40px;

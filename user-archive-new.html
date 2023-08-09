@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007ddf" />
+    <meta name="msapplication-navbutton-color" content="#007ddf">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#007ddf">
+    <title>اتاق بازرگانی ICC | پنل کاربر</title>
+    <link href="css/bootstrap.rtl.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="plugins/ssi-uploader/ssi-uploader.css">
+
+    <!-- Font Icons -->
+    <link href="css/all.rounded.css" rel="stylesheet" type="text/css" />
+    <link href="plugins/aos/aos.css" rel="stylesheet" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/small-icon.png" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png" />
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="myNavbar">
+        <div class="container-lg">
+            <div class="header-inner">
+                <div class="mobile-links">
+                    <button type="button" class="btn-mobile-menu"><i class="fi fi-rr-menu-burger"></i></button>
+                    <!-- Sidebar Menu -->
+                    <div id="sidebar-menu">
+                        <div class="sidebar-header">
+                            <div class="sidebar-logo">
+                                <a href="index.html">
+                                    <img src="images/logo.svg" class="sidebarlogo" alt="logo">
+                                </a>
+                            </div>
+                            <div class="sidebar-close">
+                                <button class="btn-close-menu"><i class="fi fi-rr-cross"></i></button>
+                            </div>
+                        </div>
+                        <ul class="category-list">
+                            <li class="item"><a href="#">کمیسیون‌ها</a></li>
+                            <li class="item"><a href="#">آموزش</a></li>
+                            <li class="item"><a href="#">انتشارات</a></li>
+                            <li class="item"><a href="#">درباره ما</a></li>
+                            <li class="item"><a href="#">تماس با ما</a></li>
+                        </ul>
+                        <div class="socials-icon">
+                            <ul>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="overlay-back"></div>
+                </div>
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="logo">
+                    </a>
+                </div>
+                <div class="nav-menus">
+                    <ul class="menu-list">
+                        <li class="link"><a href="#">کمیسیون‌ها</a></li>
+                        <li class="link"><a href="#">آموزش</a></li>
+                        <li class="link have-child">
+                            <a href="#">انتشارات</a>
+                            <ul>
+                                <li><a href="#">مقالات</a></li>
+                                <li><a href="#">بولتن خبری</a></li>
+                                <li><a href="#">مقالات و دستورالعمل های ICC</a></li>
+                            </ul>
+                        </li>
+                        <li class="link"><a href="#">درباره ما</a></li>
+                        <li class="link"><a href="#">تماس با ما</a></li>
+                    </ul>
+                </div>
+                <div class="nav-action">
+                    <div class="btn-group language" role="group">
+                        <input type="radio" class="btn-check" name="btn-language" id="btn-lang-1" autocomplete="off"
+                            checked>
+                        <label class="btn btn-outline-primary" for="btn-lang-1">FA</label>
+                        <input type="radio" class="btn-check" name="btn-language" id="btn-lang-2" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="btn-lang-2">EN</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- User Dashboard -->
+    <div class="user-dashboard-section">
+        <div class="container-lg">
+            <div class="grid-layout">
+                <div class="grid-user-menu">
+                    <div class="grid-inner">
+                        <!-- close Userprofile -->
+                        <button type="button" class="btn-closeprofileMenu"><i class="fi fi-rr-cross"></i></button>
+                        <!-- User Image -->
+                        <div class="user-image">
+                            <div class="img-inner">
+                                <img src="images/default-user.svg" alt="user-name">
+                            </div>
+                            <div class="user-name">شیده صفری</div>
+                        </div>
+                        <!-- User Menu -->
+                        <div class="user-menu">
+                            <ul class="menu-list">
+                                <li class="menu-item"><a href="user-dashboard.html" class="btn-collape"><i
+                                            class="fi fi-rr-apps"></i>داشبورد</a></li>
+                                <li class="menu-item"><a href="user-transactions.html" class="btn-collape"><i
+                                            class="fi fi-rr-receipt"></i>لیست تراکنش‌ها</a></li>
+                                <li class="menu-item"><a href="user-cources.html" class="btn-collape"><i
+                                            class="fi fi-rr-play"></i>دوره‌های من</a></li>
+                                <li class="menu-item"><a href="user-profile.html" class="btn-collape"><i
+                                            class="fi fi-rr-user"></i>حساب کاربری</a></li>
+                                <li class="menu-item">
+                                    <a href="user-tickets.html" class="btn-collape">
+                                        <i class="fi fi-rr-comment-alt"></i>
+                                        پیام‌های مدیریت
+                                        <span
+                                            class="position-absolute top-50 end-0 translate-middle badge rounded-pill bg-danger">
+                                            2+
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="menu-item active"><a href="user-archives.html" class="btn-collape"><i
+                                            class="fi fi-rr-archive"></i>آرشیو مدارک و سوابق</a></li>
+                                <li class="menu-item">
+                                    <a href="#" class="btn-collape" data-bs-toggle="modal"
+                                        data-bs-target="#modal-logout">
+                                        <i class="fi fi-rr-sign-out-alt"></i>
+                                        خروج از حساب کاربری
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="overlay-userMenu"></div>
+                </div>
+                <div class="grid-main">
+                    <div class="grid-inner">
+                        <div class="main-title">
+                            <div class="title-inner">
+                                <button type="button" class="btn-usermenu"><i
+                                        class="fi fi-rr-menu-dots-vertical"></i></button>
+                                <div class="icon">
+                                    <i class="fi fi-rr-archive"></i>
+                                </div>
+                                <h3>مدرک جدید</h3>
+                            </div>
+                            <div class="buttons-group">
+                                <a href="user-archives.html" class="btn btn-primary icon-left">بازگشت<i
+                                        class="fi fi-rr-arrow-small-left"></i></a>
+                            </div>
+                        </div>
+                        <div class="main-body">
+
+                            <div class="form-content">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>سابقه تحصیلی</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">با سابقه</option>
+                                                    <option value="2">بی سابقه</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <label>عنوان</label>
+                                                <input type="text" class="input" placeholder="عنوان" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="inputgroup">
+                                                <label>نام دانشگاه محل تحصیل</label>
+                                                <input type="text" class="input" placeholder="نام دانشگاه محل تحصیل"
+                                                    required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>سال شروع</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">شروع 1</option>
+                                                    <option value="2">شروع 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6">
+                                            <div class="select-group">
+                                                <label>سال پایان</label>
+                                                <select class="form-select">
+                                                    <option value="0" selected disabled>یک مورد را انتخاب کنید</option>
+                                                    <option value="1">پایان 1</option>
+                                                    <option value="2">پایان 2</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <div class="file-upload-content">
+                                                <div class="image-uploader">
+                                                    <label for="bg-banner-class">مدرک مورد نظر</label>
+                                                    <input type="file" name="bg-banner-class" id="bg-banner-class"
+                                                        accept="image/png, image/jpeg" multiple />
+                                                </div>
+                                                <div class="help-tips mt-3">
+                                                    <ul>
+                                                        <li>عکس باگذاری کمتر از 1 مگابایت باشد.</li>
+                                                        <li>عکس با پسوندهای <strong>PNG, JPEG, JPG</strong> مجاز می
+                                                            باشد.
+                                                        </li>
+                                                        <li>اندازه عکس <strong>1620x540</strong> باشد.</li>
+                                                        <li>حداکثر تعداد بارگذاری عکس <strong>1 عدد</strong> می باشد.
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <div class="btns-action-main">
+                                                <a href="#" class="btn btn-primary">تایید</a>
+                                                <a href="#" class="btn btn-primary-outline">انصراف</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="information">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo-white.svg" alt="logo">
+                                </a>
+                            </div>
+                            <div class="description">
+                                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+                                    گرافیک است چاپگرها و متون بلکه روزنامه
+                                    و مجله در ستون و سطرآنچنان که لازم است</p>
+                            </div>
+                            <div class="e-sign">
+                                <ul>
+                                    <li>
+                                        <a href="#"><img src="https://via.placeholder.com/300x300/ccc.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="https://via.placeholder.com/300x300/ccc.png" alt=""></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><img src="https://via.placeholder.com/300x300/ccc.png" alt=""></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6">
+                        <div class="links">
+                            <h5 class="footer-title">دسترسی سریع</h5>
+                            <ul>
+                                <li><a href="#">صفحه‌ اصلی</a></li>
+                                <li><a href="#">خدمات مشورتی</a></li>
+                                <li><a href="#">مقالات و دستورالعمل‌ها</a></li>
+                                <li><a href="#">انتشارات</a></li>
+                                <li><a href="#">اخبار</a></li>
+                                <li><a href="#">درباره ما</a></li>
+                                <li><a href="#">آموزش</a></li>
+                                <li><a href="#">شرایط عضویت</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="socials-information">
+                            <h5 class="footer-title">ارتباط با ما</h5>
+                            <ul class="icons-list">
+                                <li><a href="#"><i class="fi fi-brands-linkedin"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-telegram"></i></a></li>
+                                <li><a href="#"><i class="fi fi-brands-instagram"></i></a></li>
+                            </ul>
+                            <div class="call-content">
+                                <ul>
+                                    <li>
+                                        شماره تماس :
+                                        <div class="desc">
+                                            <a href="tel:0215648893">021-5648893</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        آدرس :
+                                        <div class="desc">تهران ملاصدرا، نبش کوچه</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>تمامی حقوق متعلق به کمیته ایرانی اتاق بازرگانی بین المللی است. طراحی و اجرا توسط <a
+                        href="#">آی‌تی‌سان</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Logout -->
+    <div class="modal fade" id="modal-logout" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title"><i class="fi fi-rr-sign-out-alt"></i>خروج</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="title-mini">از حساب کاربری خود خارج می‌شوید؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خیر</button>
+                    <button type="button" class="btn btn-primary">بله</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Scripts -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="plugins/swiperjs/swiper-initial.js"></script>
+    <script src="plugins/aos/aos.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="plugins/ssi-uploader/ssi-uploader.js"></script>
+    <script src="plugins/ssi-uploader/ssi-uploader-initial.js"></script>
+</body>
+
+</html>

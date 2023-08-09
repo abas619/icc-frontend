@@ -5,18 +5,19 @@
 }
 .modal-title {
   display: flex;
-  color: $primary;
-  font-size: 18px;
+  color: $textDark;
+  font-size: 20px;
+  font-weight: 600;
   .fi {
     margin-left: 10px;
     position: relative;
     top: 1px;
     font-size: 22px;
-    color: rgba($color: white, $alpha: 0.7);
+    color: $textSilver;
   }
 }
 .modal-header {
-  background-color: $background_dark2;
+  background-color: $background;
   border-radius: 0;
   border-bottom: none;
 }
