@@ -1242,20 +1242,25 @@ input[type=number] {
 }
 
 .cards-list {
-  display: grid;
-  grid-template-rows: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.cards-list.row-4 {
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 16px;
+.cards-list.row-4 .card-member {
+  flex: 0 0 25%;
+  width: 25%;
+  padding: 8px;
 }
-.cards-list.row-3 {
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 16px;
+.cards-list.row-3 .card-member {
+  flex: 0 0 33.33%;
+  width: 33.33%;
+  padding: 8px;
 }
-.cards-list.row-2 {
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.cards-list.row-2 .card-member {
+  flex: 0 0 50%;
+  width: 50%;
+  padding: 8px;
 }
 
 @media (max-width: 1199px) {
@@ -1274,9 +1279,9 @@ input[type=number] {
   .card-course .info ul li .fi {
     font-size: 15px;
   }
-  .cards-list.row-4 {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 12px;
+  .cards-list.row-4 .card-member {
+    flex: 0 0 33.33%;
+    width: 33.33%;
   }
 }
 @media (max-width: 992px) {
@@ -1294,9 +1299,9 @@ input[type=number] {
   }
 }
 @media (max-width: 768px) {
-  .cards-list.row-4 {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  .cards-list.row-4 .card-member {
+    flex: 0 0 50%;
+    width: 50%;
   }
 }
 @media (max-width: 575px) {
@@ -1329,8 +1334,9 @@ input[type=number] {
   }
 }
 @media (max-width: 450px) {
-  .cards-list.row-4 {
-    grid-template-columns: 1fr;
+  .cards-list.row-4 .card-member {
+    flex: 0 0 100%;
+    width: 100%;
   }
 }
 /*#endregion -------------- Cards */
@@ -4672,6 +4678,7 @@ input[type=number] {
 .mini-title {
   font-size: 18px;
   margin-bottom: 1rem;
+  text-align: center;
 }
 .mini-title .fi {
   font-size: 22px;
@@ -4710,6 +4717,9 @@ input[type=number] {
   background-color: white;
   border: 1px solid #dadde4;
 }
+.personal-info-body .mini-title {
+  text-align: right;
+}
 .personal-info-body .description {
   margin-bottom: 20px;
 }
@@ -4741,6 +4751,12 @@ input[type=number] {
 .personal-info-body .description ul li,
 .personal-info-body .description ol li {
   margin: 8px 0;
+}
+.personal-info-body .description ul {
+  list-style: disc;
+}
+.personal-info-body .description ol {
+  list-style: decimal;
 }
 
 @media (max-width: 992px) {

@@ -113,19 +113,30 @@
 }
 
 .cards-list {
-  display: grid;
-  grid-template-rows: auto;
+  // display: grid;
+  // grid-template-rows: auto;
+  @include displayFlex(flex, center, center);
+  flex-wrap: wrap;
   &.row-4 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 16px;
+    .card-member {
+      flex: 0 0 25%;
+      width: 25%;
+      padding: 8px;
+    }
   }
   &.row-3 {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 16px;
+    .card-member {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+      padding: 8px;
+    }
   }
   &.row-2 {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
+    .card-member {
+      flex: 0 0 50%;
+      width: 50%;
+      padding: 8px;
+    }
   }
 }
 
@@ -154,8 +165,10 @@
   }
   .cards-list {
     &.row-4 {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
+      .card-member {
+        flex: 0 0 33.33%;
+        width: 33.33%;
+      }
     }
   }
 }
@@ -182,8 +195,10 @@
 @media (max-width: 768px) {
   .cards-list {
     &.row-4 {
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      .card-member {
+        flex: 0 0 50%;
+        width: 50%;
+      }
     }
   }
 }
@@ -225,7 +240,10 @@
 @media (max-width: 450px) {
   .cards-list {
     &.row-4 {
-      grid-template-columns: 1fr;
+      .card-member {
+        flex: 0 0 100%;
+        width: 100%;
+      }
     }
   }
 }
