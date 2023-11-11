@@ -101,12 +101,13 @@
     text-align: left;
     margin-top: 10px;
     .btn-primary {
-      padding: 0.4rem 1rem;
+      padding: 0.4rem 2.2rem 0.4rem 1rem;
       min-width: unset;
       font-size: 13px;
       .fi {
         font-size: 16px;
-        top: 3px;
+        top: 7px;
+        right: 10px;
       }
     }
   }

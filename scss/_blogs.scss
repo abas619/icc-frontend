@@ -142,12 +142,13 @@
     }
     .btn-primary-outline {
       font-size: 13px;
-      padding: 0.5rem 1rem;
+      padding: 0.5rem 1rem 0.5rem 2.1rem;
       min-width: unset;
       display: flex;
       align-items: center;
       .fi {
-        top: 0;
+        left: 5px;
+        top: 6px;
       }
     }
   }
@@ -833,7 +834,9 @@
         flex: 1 0 100%;
         text-align: center;
         justify-content: center;
-        padding: 0.3rem 0.8rem;
+        .fi {
+          top: 3px;
+        }
       }
     }
   }

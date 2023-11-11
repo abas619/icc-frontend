@@ -137,7 +137,7 @@
   .send-request {
     margin-left: 12px;
   }
-  .language {
+  .buttons-language {
     .btn-check {
       &:checked {
         + .btn {
@@ -181,7 +181,7 @@
       box-shadow: $boxshadow;
     }
     .header-inner {
-      grid-template-columns: 90px auto 90px;
+      grid-template-columns: 1fr 100px 1fr;
     }
     .nav-menus {
       display: none;
@@ -213,7 +213,6 @@
 @media (max-width: 575px) {
   .myNavbar {
     .header-inner {
-      grid-template-columns: 48px auto 48px;
       position: relative;
     }
   }

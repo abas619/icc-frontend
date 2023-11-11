@@ -271,27 +271,32 @@
         font-size: 14px;
       }
     }
-    .comments .comment .comment-wrap {
-      padding-bottom: 0.7rem;
-      .comment-info {
-        .commenter-info span {
-          &.commenter-name {
-            font-size: 15px;
+    .comments .comment {
+      .comment-wrap {
+        padding-bottom: 0.7rem;
+        .comment-info {
+          .commenter-info span {
+            &.commenter-name {
+              font-size: 15px;
+            }
+            &.date {
+              font-size: 12px;
+            }
           }
-          &.date {
-            font-size: 12px;
+          .commenter-thumb {
+            width: 48px;
+            height: 48px;
           }
         }
-        .commenter-thumb {
-          width: 48px;
-          height: 48px;
+        .comment-body {
+          p {
+            font-size: 15px;
+            margin-bottom: 0.5rem;
+          }
         }
       }
-      .comment-body {
-        p {
-          font-size: 15px;
-          margin-bottom: 0.5rem;
-        }
+      .child-comment {
+        margin: 20px 20px 5px 0;
       }
     }
   }
@@ -335,9 +340,6 @@
             line-height: normal;
           }
         }
-      }
-      .child-comment {
-        margin: 20px 20px 5px 0;
       }
     }
   }
