@@ -147,13 +147,13 @@
           top: 50%;
           right: 50%;
           transform: translate(50%, -50%);
-          font-size: 24px;
+          font-size: 18px;
           font-family: $iconFontRegular;
           color: $primary;
         }
       }
       .name {
-        padding-right: 20px;
+        padding: 0 20px;
         color: $textGrey;
       }
       &.collapsed {
@@ -420,7 +420,7 @@
     .main-info {
       order: 2;
       .info-inner {
-        padding-left: 0;
+        padding: 0 !important;
       }
     }
     .side-info {

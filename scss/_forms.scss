@@ -185,6 +185,22 @@
     top: 5px;
   }
 }
+.help-tips {
+  ul {
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+      margin: 5px 0;
+      strong {
+        font-weight: 600;
+        color: $textDark;
+        margin: 0 5px;
+      }
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .form-section {
     .form-content {
