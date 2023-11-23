@@ -2,6 +2,23 @@
 body.ltr {
   direction: ltr;
   text-align: left;
+  font-family: Inter !important;
+}
+body.ltr h1,
+body.ltr h2,
+body.ltr h3,
+body.ltr h4,
+body.ltr h5,
+body.ltr h6,
+body.ltr input,
+body.ltr textarea,
+body.ltr strong,
+body.ltr span,
+body.ltr p {
+  font-family: Inter !important;
+}
+body.ltr .tooltip-inner {
+  font-family: Inter !important;
 }
 body.ltr .myNavbar .nav-menus {
   margin-right: unset;

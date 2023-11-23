@@ -1,6 +1,23 @@
 body.ltr {
   direction: ltr;
   text-align: left;
+  font-family: $bodyFontLatin !important;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input,
+  textarea,
+  strong,
+  span,
+  p {
+    font-family: $bodyFontLatin !important;
+  }
+  .tooltip-inner {
+    font-family: $bodyFontLatin !important;
+  }
   .myNavbar {
     .nav-menus {
       margin-right: unset;
