@@ -1,0 +1,333 @@
+/*#region ----------------- Question and Answer */
+.qa-list-section {
+  margin: 40px 0 80px 0;
+  .section-inner {
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid $borderColor;
+    padding: 40px 20px 20px 20px;
+  }
+  .title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: $textDark;
+    margin-bottom: 20px;
+  }
+  .info {
+    .item {
+      margin-top: 20px;
+    }
+    .icon {
+      font-size: 14px;
+      font-weight: 500;
+      color: $textGrey;
+      .fi {
+        position: relative;
+        top: 5px;
+        font-size: 18px;
+        color: $textSilver;
+        margin-left: 10px;
+      }
+    }
+    .text {
+      font-size: 16px;
+      font-weight: 600;
+      color: $textDark;
+      margin-top: 10px;
+      padding-right: 30px;
+    }
+    .desc {
+      font-size: 16px;
+      font-weight: 400;
+      color: $textDark;
+      margin-top: 10px;
+      text-align: justify;
+      padding-right: 30px;
+    }
+  }
+  .price-content {
+    margin-top: 10px;
+    padding-right: 30px;
+    .normal,
+    .special {
+      font-size: 18px;
+      font-weight: 600;
+      color: $textDark;
+      margin: 10px 0;
+      @include displayFlex(flex, center, flex-start);
+    }
+    h6 {
+      font-size: 16px;
+      margin-bottom: 0;
+      color: $textGrey;
+      margin-left: 10px;
+    }
+    .toman {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+    }
+  }
+  .teacher-list {
+    @include displayFlex(flex, center, flex-start);
+    flex-wrap: wrap;
+    margin-top: 10px;
+    .teacher {
+      flex: 0 0 33.33%;
+      width: 33.33%;
+    }
+  }
+  .teacher {
+    padding: 5px;
+    .inner {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 60px auto;
+      align-items: center;
+      background-color: $background;
+    }
+    .thumb {
+      img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+    .data {
+      padding-right: 10px;
+      h5 {
+        font-size: 14px;
+        margin-bottom: 5px;
+        color: $textDark;
+        @include textTruncate(1);
+      }
+      p {
+        font-size: 13px;
+        margin-bottom: 0;
+        color: $textGrey;
+        @include textTruncate(1);
+      }
+    }
+  }
+  .select-form-content {
+    margin: 40px 0 20px 0;
+    h6 {
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+    .radios-group {
+      margin-top: 20px;
+    }
+    .form-content {
+      display: none;
+      border: 1px solid $borderColor;
+      padding: 20px;
+      margin-top: 15px;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  .send-form {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+#warning-msg {
+  font-size: 14px;
+  font-weight: 600;
+  color: $error;
+  margin-top: 10px;
+  padding-right: 25px;
+  display: none;
+  &.active {
+    display: block;
+  }
+}
+.users-list-content {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto 320px;
+  border-top: 1px solid $borderColor;
+  padding-top: 20px;
+  .form-add-user {
+    .inner {
+      position: sticky;
+      top: 30px;
+      background-color: $background;
+      padding: 20px;
+    }
+    h6 {
+      font-size: 14px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .btn-add {
+      width: 100%;
+    }
+  }
+  .list-user-added {
+    padding-left: 20px;
+    .user {
+      display: grid;
+      grid-template-columns: 50px auto;
+      align-items: center;
+      border: 1px solid $borderColor;
+      margin-top: 10px;
+      padding: 10px;
+      position: relative;
+      border-radius: 2px;
+      .thumb {
+        img {
+          width: 100%;
+          border-radius: 50%;
+          border: 1px solid $borderColor;
+        }
+      }
+      .info {
+        padding-right: 10px;
+        padding-left: 45px;
+        .user-name {
+          font-size: 14px;
+          font-weight: 600;
+          color: $textDark;
+          margin-bottom: 5px;
+        }
+        .phone-number {
+          font-size: 13px;
+          font-weight: 400;
+          color: $textGrey;
+        }
+      }
+      .btn-edit {
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 28px;
+        height: 28px;
+        background-color: rgba($color: $error, $alpha: 0.15);
+        color: $error;
+        border-radius: 2px;
+        padding: 4px;
+        border: none;
+        font-size: 20px;
+        &:hover {
+          background-color: $error;
+          color: white;
+        }
+      }
+    }
+  }
+  .count-title {
+    span {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textGrey;
+      margin-right: 5px;
+    }
+  }
+}
+.total-price-count {
+  background-color: rgba($color: $secondary, $alpha: 0.1);
+  margin: 15px 0;
+  padding: 15px;
+  text-align: center;
+  h6 {
+    font-size: 14px;
+    color: $textDark;
+    margin-bottom: 10px !important;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 800;
+    color: $textDark;
+    margin-bottom: 0;
+    .toman {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textDark;
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .qa-list-section {
+    .teacher-list {
+      .teacher {
+        flex: 0 0 50%;
+        width: 50%;
+      }
+    }
+  }
+  .users-list-content {
+    grid-template-columns: 100%;
+    .list-user-added {
+      padding-left: 0;
+      order: 2;
+    }
+    .form-add-user {
+      order: 1;
+      margin-bottom: 15px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .qa-list-section {
+    .section-inner {
+      padding: 30px 10px 10px 10px;
+    }
+    .title {
+      font-size: 18px;
+    }
+    .info {
+      .icon {
+        font-size: 13px;
+      }
+      .text,
+      .desc {
+        font-size: 14px;
+      }
+    }
+    .select-form-content {
+      .form-content {
+        padding: 10px;
+      }
+      h6 {
+        font-size: 14px;
+      }
+    }
+  }
+  .users-list-content .form-add-user {
+    .inner {
+      padding: 10px;
+    }
+    .inputgroup {
+      margin-bottom: 10px;
+      .input {
+        height: unset;
+      }
+    }
+    .btns-action {
+      .btn {
+        padding: 0.5rem 1rem;
+        font-size: 14px;
+        .fi {
+          top: 7px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575px) {
+  .qa-list-section {
+    .teacher-list {
+      .teacher {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+/*#endregion -------------- Question and Answer */

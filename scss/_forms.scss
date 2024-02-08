@@ -149,6 +149,12 @@
     .form-check-label {
       cursor: pointer;
     }
+    .form-check-input {
+      border-color: rgba($color: #000000, $alpha: 0.3);
+      &:checked {
+        border-color: $primary;
+      }
+    }
   }
 }
 

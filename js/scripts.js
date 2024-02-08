@@ -119,3 +119,78 @@ if (document.querySelector(".buttons-language") != null) {
     body.classList.remove("ltr");
   };
 }
+
+// برای نشست های پرسش و پاسخ
+
+// Choose Forms
+if (document.querySelector('input[name="radio-select-form"]') != null) {
+  const radios = document.querySelectorAll('input[name="radio-select-form"]');
+  const formNormal = document.getElementById("form-normal");
+  const formSpecial = document.getElementById("form-special");
+
+  radios.forEach((radio) => {
+    radio.addEventListener("change", function () {
+      if (this.value === "normal") {
+        formNormal.classList.add("active");
+        formSpecial.classList.remove("active");
+      } else if (this.value === "special") {
+        formNormal.classList.remove("active");
+        formSpecial.classList.add("active");
+      }
+    });
+  });
+}
+
+if (document.getElementById("warning-msg") != null) {
+  const warningMsg = document.getElementById("warning-msg");
+  const checkboxWarning = document.getElementById("checkbox-warning-msg");
+  checkboxWarning.addEventListener("change", function () {
+    console.log("change");
+    if (this.checked) {
+      warningMsg.classList.add("active");
+    } else {
+      warningMsg.classList.remove("active");
+    }
+  });
+}
+
+// برای اضافه کردن فرم و کارت ها دعوت
+function addUser() {
+  var name = document.getElementById("name").value;
+  var phone = document.getElementById("phone").value;
+
+  if (name !== "" && phone !== "") {
+    var newUserCard = `
+  <div class="user">
+      <div class="thumb">
+          <img src="images/default-user.svg" alt="img">
+      </div>
+      <div class="info">
+          <div class="user-name">${name}</div>
+          <div class="phone-number">${phone}</div>
+      </div>
+      <button class="btn-edit delete" onclick="deleteUser(this)">
+          <i class="fi fi-rr-trash"></i>
+      </button>
+  </div>
+  `;
+
+    var listInner = document.querySelector(".list-inner");
+    listInner.insertAdjacentHTML("beforeend", newUserCard);
+
+    updateCount();
+
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+  } else {
+    alert("لطفاً اطلاعات را به درستی وارد کنید.");
+  }
+}
+function deleteUser(button) {
+  button.parentNode.remove();
+  updateCount();
+}
+function updateCount() {
+  var count = document.querySelectorAll(".list-inner .user").length;
+  document.querySelector(".count").textContent = `(${count} کاربر)`;
+}

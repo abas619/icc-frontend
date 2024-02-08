@@ -598,4 +598,61 @@ body.ltr {
       text-align: right;
     }
   }
+  .qa-list-section {
+    .info {
+      .icon {
+        .fi {
+          margin-left: 0;
+          margin-right: 10px;
+        }
+      }
+      .text,
+      .desc {
+        padding-right: 0;
+        padding-left: 30px;
+      }
+    }
+    .teacher {
+      .data {
+        padding-right: 0;
+        padding-left: 10px;
+      }
+    }
+    .price-content {
+      padding-right: 0;
+      padding-left: 30px;
+      h6 {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+    .select-form-content .radios-group {
+      .form-check {
+        margin: 0 30px 10px 0;
+      }
+    }
+  }
+  #warning-msg {
+    padding-right: 0;
+    padding-left: 25px;
+  }
+  .users-list-content {
+    .list-user-added {
+      padding-left: 0;
+      .user {
+        .info {
+          padding-right: 45px;
+          padding-left: 10px;
+        }
+        .btn-edit {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+    .count-title span {
+      margin-right: 0;
+      margin-left: 5px;
+    }
+  }
 }

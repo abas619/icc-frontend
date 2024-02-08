@@ -495,6 +495,49 @@ body.ltr .card-ticket.reply {
 body.ltr .card-ticket .satus {
   text-align: right;
 }
+body.ltr .qa-list-section .info .icon .fi {
+  margin-left: 0;
+  margin-right: 10px;
+}
+body.ltr .qa-list-section .info .text,
+body.ltr .qa-list-section .info .desc {
+  padding-right: 0;
+  padding-left: 30px;
+}
+body.ltr .qa-list-section .teacher .data {
+  padding-right: 0;
+  padding-left: 10px;
+}
+body.ltr .qa-list-section .price-content {
+  padding-right: 0;
+  padding-left: 30px;
+}
+body.ltr .qa-list-section .price-content h6 {
+  margin-left: 0;
+  margin-right: 10px;
+}
+body.ltr .qa-list-section .select-form-content .radios-group .form-check {
+  margin: 0 30px 10px 0;
+}
+body.ltr #warning-msg {
+  padding-right: 0;
+  padding-left: 25px;
+}
+body.ltr .users-list-content .list-user-added {
+  padding-left: 0;
+}
+body.ltr .users-list-content .list-user-added .user .info {
+  padding-right: 45px;
+  padding-left: 10px;
+}
+body.ltr .users-list-content .list-user-added .user .btn-edit {
+  left: unset;
+  right: 10px;
+}
+body.ltr .users-list-content .count-title span {
+  margin-right: 0;
+  margin-left: 5px;
+}
 
 /*#region ----------------- General */
 *,
@@ -1666,11 +1709,12 @@ input[type=number] {
   border: 1px solid #dadde4;
   padding: 15px;
   display: grid;
-  grid-template-columns: 160px auto;
+  grid-template-columns: 120px auto;
+  position: relative;
 }
 .card-course .thumb {
   width: 100%;
-  height: 160px;
+  height: 120px;
   overflow: hidden;
   border-radius: 2px;
   position: relative;
@@ -1692,8 +1736,7 @@ input[type=number] {
   transition: all 0.3s ease-in;
 }
 .card-course .info {
-  padding-right: 15px;
-  padding-top: 5px;
+  padding: 5px 15px 50px 0;
 }
 .card-course .info h3 {
   font-size: 16px;
@@ -1724,18 +1767,36 @@ input[type=number] {
   color: #7a7e88;
 }
 .card-course .download-link {
-  text-align: left;
-  margin-top: 10px;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .card-course .download-link .btn-primary {
-  padding: 0.4rem 2.2rem 0.4rem 1rem;
+  padding: 0.5rem 2.2rem 0.5rem 1rem;
   min-width: unset;
   font-size: 13px;
 }
 .card-course .download-link .btn-primary .fi {
   font-size: 16px;
-  top: 7px;
+  top: 8px;
   right: 10px;
+}
+.card-course .price {
+  margin-left: 20px;
+}
+.card-course .price h5 {
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #414756;
+}
+.card-course .price h5 span {
+  color: #7a7e88;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .cards-list {
@@ -1818,7 +1879,7 @@ input[type=number] {
     height: 200px;
   }
   .card-course .info {
-    padding: 10px 0 0 0;
+    padding: 10px 0;
   }
   .card-course .info h3 {
     font-size: 13px;
@@ -1828,6 +1889,11 @@ input[type=number] {
   }
   .card-course .info ul li .fi {
     font-size: 14px;
+  }
+  .card-course .download-link {
+    position: relative;
+    left: unset;
+    bottom: 0;
   }
 }
 @media (max-width: 450px) {
@@ -4853,6 +4919,12 @@ input[type=number] {
 .radios-group .form-check .form-check-label {
   cursor: pointer;
 }
+.radios-group .form-check .form-check-input {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+.radios-group .form-check .form-check-input:checked {
+  border-color: #007ddf;
+}
 
 .form-section {
   margin: 0 0 100px 0;
@@ -6398,3 +6470,322 @@ input[type=number] {
 }
 
 /*#endregion -------------- Modal Styles */
+/*#region ----------------- Question and Answer */
+.qa-list-section {
+  margin: 40px 0 80px 0;
+}
+.qa-list-section .section-inner {
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #dadde4;
+  padding: 40px 20px 20px 20px;
+}
+.qa-list-section .title {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: #414756;
+  margin-bottom: 20px;
+}
+.qa-list-section .info .item {
+  margin-top: 20px;
+}
+.qa-list-section .info .icon {
+  font-size: 14px;
+  font-weight: 500;
+  color: #7a7e88;
+}
+.qa-list-section .info .icon .fi {
+  position: relative;
+  top: 5px;
+  font-size: 18px;
+  color: #a5abbd;
+  margin-left: 10px;
+}
+.qa-list-section .info .text {
+  font-size: 16px;
+  font-weight: 600;
+  color: #414756;
+  margin-top: 10px;
+  padding-right: 30px;
+}
+.qa-list-section .info .desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: #414756;
+  margin-top: 10px;
+  text-align: justify;
+  padding-right: 30px;
+}
+.qa-list-section .price-content {
+  margin-top: 10px;
+  padding-right: 30px;
+}
+.qa-list-section .price-content .normal,
+.qa-list-section .price-content .special {
+  font-size: 18px;
+  font-weight: 600;
+  color: #414756;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.qa-list-section .price-content h6 {
+  font-size: 16px;
+  margin-bottom: 0;
+  color: #7a7e88;
+  margin-left: 10px;
+}
+.qa-list-section .price-content .toman {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7a7e88;
+}
+.qa-list-section .teacher-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.qa-list-section .teacher-list .teacher {
+  flex: 0 0 33.33%;
+  width: 33.33%;
+}
+.qa-list-section .teacher {
+  padding: 5px;
+}
+.qa-list-section .teacher .inner {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 60px auto;
+  align-items: center;
+  background-color: #f5f9ff;
+}
+.qa-list-section .teacher .thumb img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+.qa-list-section .teacher .data {
+  padding-right: 10px;
+}
+.qa-list-section .teacher .data h5 {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #414756;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.qa-list-section .teacher .data p {
+  font-size: 13px;
+  margin-bottom: 0;
+  color: #7a7e88;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.qa-list-section .select-form-content {
+  margin: 40px 0 20px 0;
+}
+.qa-list-section .select-form-content h6 {
+  margin-bottom: 0;
+  font-size: 16px;
+}
+.qa-list-section .select-form-content .radios-group {
+  margin-top: 20px;
+}
+.qa-list-section .select-form-content .form-content {
+  display: none;
+  border: 1px solid #dadde4;
+  padding: 20px;
+  margin-top: 15px;
+}
+.qa-list-section .select-form-content .form-content.active {
+  display: block;
+}
+.qa-list-section .send-form {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#warning-msg {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ff3333;
+  margin-top: 10px;
+  padding-right: 25px;
+  display: none;
+}
+#warning-msg.active {
+  display: block;
+}
+
+.users-list-content {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: auto 320px;
+  border-top: 1px solid #dadde4;
+  padding-top: 20px;
+}
+.users-list-content .form-add-user .inner {
+  position: sticky;
+  top: 30px;
+  background-color: #f5f9ff;
+  padding: 20px;
+}
+.users-list-content .form-add-user h6 {
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.users-list-content .form-add-user .btn-add {
+  width: 100%;
+}
+.users-list-content .list-user-added {
+  padding-left: 20px;
+}
+.users-list-content .list-user-added .user {
+  display: grid;
+  grid-template-columns: 50px auto;
+  align-items: center;
+  border: 1px solid #dadde4;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  border-radius: 2px;
+}
+.users-list-content .list-user-added .user .thumb img {
+  width: 100%;
+  border-radius: 50%;
+  border: 1px solid #dadde4;
+}
+.users-list-content .list-user-added .user .info {
+  padding-right: 10px;
+  padding-left: 45px;
+}
+.users-list-content .list-user-added .user .info .user-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #414756;
+  margin-bottom: 5px;
+}
+.users-list-content .list-user-added .user .info .phone-number {
+  font-size: 13px;
+  font-weight: 400;
+  color: #7a7e88;
+}
+.users-list-content .list-user-added .user .btn-edit {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 51, 51, 0.15);
+  color: #ff3333;
+  border-radius: 2px;
+  padding: 4px;
+  border: none;
+  font-size: 20px;
+}
+.users-list-content .list-user-added .user .btn-edit:hover {
+  background-color: #ff3333;
+  color: white;
+}
+.users-list-content .count-title span {
+  font-size: 14px;
+  font-weight: 400;
+  color: #7a7e88;
+  margin-right: 5px;
+}
+
+.total-price-count {
+  background-color: rgba(0, 221, 179, 0.1);
+  margin: 15px 0;
+  padding: 15px;
+  text-align: center;
+}
+.total-price-count h6 {
+  font-size: 14px;
+  color: #414756;
+  margin-bottom: 10px !important;
+}
+.total-price-count p {
+  font-size: 18px;
+  font-weight: 800;
+  color: #414756;
+  margin-bottom: 0;
+}
+.total-price-count p .toman {
+  font-size: 14px;
+  font-weight: 400;
+  color: #414756;
+  margin-right: 5px;
+}
+
+@media (max-width: 992px) {
+  .qa-list-section .teacher-list .teacher {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+  .users-list-content {
+    grid-template-columns: 100%;
+  }
+  .users-list-content .list-user-added {
+    padding-left: 0;
+    order: 2;
+  }
+  .users-list-content .form-add-user {
+    order: 1;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .qa-list-section .section-inner {
+    padding: 30px 10px 10px 10px;
+  }
+  .qa-list-section .title {
+    font-size: 18px;
+  }
+  .qa-list-section .info .icon {
+    font-size: 13px;
+  }
+  .qa-list-section .info .text,
+  .qa-list-section .info .desc {
+    font-size: 14px;
+  }
+  .qa-list-section .select-form-content .form-content {
+    padding: 10px;
+  }
+  .qa-list-section .select-form-content h6 {
+    font-size: 14px;
+  }
+  .users-list-content .form-add-user .inner {
+    padding: 10px;
+  }
+  .users-list-content .form-add-user .inputgroup {
+    margin-bottom: 10px;
+  }
+  .users-list-content .form-add-user .inputgroup .input {
+    height: unset;
+  }
+  .users-list-content .form-add-user .btns-action .btn {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+  }
+  .users-list-content .form-add-user .btns-action .btn .fi {
+    top: 7px;
+  }
+}
+@media (max-width: 575px) {
+  .qa-list-section .teacher-list .teacher {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+}
+/*#endregion -------------- Question and Answer */

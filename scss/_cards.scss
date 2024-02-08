@@ -56,14 +56,14 @@
     border: 1px solid $borderColor;
     padding: 15px;
     display: grid;
-    grid-template-columns: 160px auto;
+    grid-template-columns: 120px auto;
+    position: relative;
   }
   .thumb {
-    @include imgContainer(160px, 2px);
+    @include imgContainer(120px, 2px);
   }
   .info {
-    padding-right: 15px;
-    padding-top: 5px;
+    padding: 5px 15px 50px 0;
     h3 {
       font-size: 16px;
       font-weight: 600;
@@ -98,24 +98,38 @@
     }
   }
   .download-link {
-    text-align: left;
-    margin-top: 10px;
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+    @include displayFlex(flex, center, flex-end);
     .btn-primary {
-      padding: 0.4rem 2.2rem 0.4rem 1rem;
+      padding: 0.5rem 2.2rem 0.5rem 1rem;
       min-width: unset;
       font-size: 13px;
       .fi {
         font-size: 16px;
-        top: 7px;
+        top: 8px;
         right: 10px;
+      }
+    }
+  }
+  .price {
+    margin-left: 20px;
+    h5 {
+      margin-bottom: 0;
+      font-size: 18px;
+      font-weight: 800;
+      color: $textDark;
+      span {
+        color: $textGrey;
+        font-size: 14px;
+        font-weight: 500;
       }
     }
   }
 }
 
 .cards-list {
-  // display: grid;
-  // grid-template-rows: auto;
   @include displayFlex(flex, center, center);
   flex-wrap: wrap;
   &.row-4 {
@@ -139,9 +153,6 @@
       padding: 8px;
     }
   }
-}
-
-@media (max-width: 1400px) {
 }
 
 @media (max-width: 1199px) {
@@ -225,7 +236,7 @@
       height: 200px;
     }
     .info {
-      padding: 10px 0 0 0;
+      padding: 10px 0;
       h3 {
         font-size: 13px;
       }
@@ -235,6 +246,11 @@
           font-size: 14px;
         }
       }
+    }
+    .download-link {
+      position: relative;
+      left: unset;
+      bottom: 0;
     }
   }
 }
