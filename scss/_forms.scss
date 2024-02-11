@@ -156,6 +156,14 @@
       }
     }
   }
+  &.grid-2 {
+    .form-check {
+      flex: 0 0 50%;
+      width: 50%;
+      margin-left: 0;
+      padding-left: 15px;
+    }
+  }
 }
 
 .form-section {

@@ -4925,6 +4925,12 @@ input[type=number] {
 .radios-group .form-check .form-check-input:checked {
   border-color: #007ddf;
 }
+.radios-group.grid-2 .form-check {
+  flex: 0 0 50%;
+  width: 50%;
+  margin-left: 0;
+  padding-left: 15px;
+}
 
 .form-section {
   margin: 0 0 100px 0;
@@ -6159,7 +6165,7 @@ input[type=number] {
   display: inline-block;
 }
 .card-ticket .satus.waiting span {
-  background-color: rgba(255, 225, 106, 0.3);
+  background-color: rgba(240, 189, 0, 0.3);
   color: #414756;
 }
 .card-ticket .satus.success span {
@@ -6613,6 +6619,21 @@ input[type=number] {
   text-align: center;
   margin-top: 30px;
 }
+.qa-list-section .tips-list {
+  margin-top: 30px;
+  border-top: 1px solid #dadde4;
+  padding-top: 30px;
+}
+.qa-list-section .tips-list ul {
+  list-style: disc;
+  padding-right: 30px;
+}
+.qa-list-section .tips-list ul li {
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #7a7e88;
+}
 
 #warning-msg {
   font-size: 14px;
@@ -6789,3 +6810,78 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Question and Answer */
+/*#region ----------------- Payment Status */
+.payment-status {
+  margin: 130px 0 50px 0;
+}
+.payment-status .section-inner {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #dadde4;
+  padding: 40px;
+}
+.payment-status .thumb {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.payment-status .thumb.success {
+  background-image: url(../images/icons/icon-check.svg);
+}
+.payment-status .thumb.error {
+  background-image: url(../images/icons/icon-error.svg);
+}
+.payment-status .thumb.warning {
+  background-image: url(../images/icons/icon-warning.svg);
+}
+.payment-status .title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+.payment-status .title.success {
+  color: #00bd79;
+}
+.payment-status .title.error {
+  color: #ff3333;
+}
+.payment-status .title.warning {
+  color: #f0bd00;
+}
+.payment-status p {
+  margin: 15px 0;
+  font-size: 14px;
+  text-align: center;
+  color: #7a7e88;
+}
+.payment-status ul {
+  text-align: center;
+  border-top: 1px solid #dadde4;
+  padding-top: 20px;
+}
+.payment-status ul li {
+  font-size: 16px;
+  font-weight: 400;
+  color: #414756;
+  margin: 8px 0;
+}
+.payment-status ul li span {
+  color: #7a7e88;
+  margin-right: 5px;
+}
+.payment-status .btns-action {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .payment-status .section-inner {
+    width: 100%;
+  }
+}
+/*#endregion -------------- Payment Status */

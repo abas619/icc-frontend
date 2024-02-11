@@ -1,0 +1,77 @@
+/*#region ----------------- Payment Status */
+.payment-status {
+  margin: 130px 0 50px 0;
+  .section-inner {
+    width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 2px;
+    border: 1px solid $borderColor;
+    padding: 40px;
+  }
+  .thumb {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &.success {
+      background-image: url(../images/icons/icon-check.svg);
+    }
+    &.error {
+      background-image: url(../images/icons/icon-error.svg);
+    }
+    &.warning {
+      background-image: url(../images/icons/icon-warning.svg);
+    }
+  }
+  .title {
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 5px;
+    &.success {
+      color: $success;
+    }
+    &.error {
+      color: $error;
+    }
+    &.warning {
+      color: $warning;
+    }
+  }
+  p {
+    margin: 15px 0;
+    font-size: 14px;
+    text-align: center;
+    color: $textGrey;
+  }
+  ul {
+    text-align: center;
+    border-top: 1px solid $borderColor;
+    padding-top: 20px;
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      color: $textDark;
+      margin: 8px 0;
+      span {
+        color: $textGrey;
+        margin-right: 5px;
+      }
+    }
+  }
+  .btns-action {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .payment-status {
+    .section-inner {
+      width: 100%;
+    }
+  }
+}
+/*#endregion -------------- Payment Status */

@@ -133,6 +133,21 @@
     text-align: center;
     margin-top: 30px;
   }
+  .tips-list {
+    margin-top: 30px;
+    border-top: 1px solid $borderColor;
+    padding-top: 30px;
+    ul {
+      list-style: disc;
+      padding-right: 30px;
+      li {
+        margin: 5px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $textGrey;
+      }
+    }
+  }
 }
 #warning-msg {
   font-size: 14px;
