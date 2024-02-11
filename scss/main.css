@@ -516,8 +516,12 @@ body.ltr .qa-list-section .price-content h6 {
   margin-left: 0;
   margin-right: 10px;
 }
-body.ltr .qa-list-section .select-form-content .radios-group .form-check {
+body.ltr .qa-list-section .radios-group .form-check {
   margin: 0 30px 10px 0;
+}
+body.ltr .qa-list-section .tips-list ul {
+  padding-right: 0;
+  padding-left: 30px;
 }
 body.ltr #warning-msg {
   padding-right: 0;
@@ -4870,7 +4874,6 @@ input[type=number] {
   margin-bottom: 5px;
 }
 .textarea-group .form-control {
-  text-align: right;
   font-size: 15px;
   font-weight: 400;
   border-radius: 0;

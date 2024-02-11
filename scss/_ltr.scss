@@ -626,9 +626,15 @@ body.ltr {
         margin-right: 10px;
       }
     }
-    .select-form-content .radios-group {
+    .radios-group {
       .form-check {
         margin: 0 30px 10px 0;
+      }
+    }
+    .tips-list {
+      ul {
+        padding-right: 0;
+        padding-left: 30px;
       }
     }
   }
