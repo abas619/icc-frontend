@@ -6745,9 +6745,9 @@ input[type=number] {
   color: #414756;
   margin-bottom: 0;
 }
-.total-price-count p .toman {
-  font-size: 14px;
-  font-weight: 400;
+.total-price-count p span {
+  font-size: 16px;
+  font-weight: 500;
   color: #414756;
   margin-right: 5px;
 }
