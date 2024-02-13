@@ -25,7 +25,7 @@ var swiperCommissions = new Swiper(".swiper-commissions", {
     disableOnInteraction: false,
   },
   breakpoints: {
-    390: {
+    250: {
       slidesPerView: 2,
       spaceBetween: 10,
     },

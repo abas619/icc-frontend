@@ -2880,20 +2880,12 @@ input[type=number] {
   padding: 10px 0;
 }
 .card-commissions-simple .card-inner {
-  background-color: white;
   border: 1px solid #dadde4;
-  border-radius: 2px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 150px;
 }
-.card-commissions-simple h4 {
-  margin-bottom: 0;
-  line-height: 30px;
-  font-size: 16px;
-  color: #414756;
+.card-commissions-simple img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .swiper-commissions .swiper-wrapper {
@@ -2936,14 +2928,6 @@ input[type=number] {
   content: "\f168";
 }
 
-@media (max-width: 1199px) {
-  .card-commissions-simple {
-    padding: 8px 1px 8px 0;
-  }
-  .card-commissions-simple h4 {
-    font-size: 14px;
-  }
-}
 @media (max-width: 992px) {
   .commissions-grid-layout {
     grid-template-columns: 100%;
@@ -2960,11 +2944,6 @@ input[type=number] {
     grid-template-columns: 100%;
   }
   .commissions-grid-layout .grid-title .grid-inner p {
-    font-size: 13px;
-  }
-}
-@media (max-width: 575px) {
-  .card-commissions-simple h4 {
     font-size: 13px;
   }
 }
