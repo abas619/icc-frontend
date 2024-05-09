@@ -869,7 +869,7 @@ input[type=number] {
 @keyframes swipeRightsmall {
   from {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-10px);
   }
   to {
     opacity: 1;
@@ -879,7 +879,7 @@ input[type=number] {
 @keyframes swipeLeftsmall {
   from {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(10px);
   }
   to {
     opacity: 1;
@@ -4813,6 +4813,9 @@ input[type=number] {
   padding-right: 15px;
   height: 40px;
 }
+.inputgroup.text-right .input {
+  text-align: right;
+}
 
 .select-group {
   position: relative;
@@ -6874,20 +6877,30 @@ input[type=number] {
   margin-top: 20px;
 }
 
+@media (max-width: 992px) {
+  .payment-status {
+    margin-top: 110px;
+  }
+}
 @media (max-width: 768px) {
   .payment-status .section-inner {
     width: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .payment-status .section-inner {
+    padding: 12px;
   }
 }
 /*#endregion -------------- Payment Status */
-.form-register-print {
+.form-register-print .inner {
   width: 210mm;
   margin: 2rem auto 4rem auto;
+  padding: 10mm;
   background-color: white;
   box-sizing: border-box;
-}
-.form-register-print .inner {
-  padding: 10mm;
+  border: 1px solid #dadde4;
 }
 .form-register-print .print-head img,
 .form-register-print .print-footer img {
@@ -6925,6 +6938,7 @@ input[type=number] {
   font-weight: 800;
   margin-bottom: 2rem;
   color: #007ddf;
+  text-align: center;
 }
 .form-register-print .inputgroup label {
   font-size: 14px;
@@ -6974,3 +6988,145 @@ input[type=number] {
   text-align: center;
   margin: 30px 0;
 }
+
+@media (max-width: 992px) {
+  .form-register-print .inner {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .form-register-print .inner {
+    padding: 5mm;
+  }
+}
+/*#region ----------------- Alert */
+.alert {
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  border-right-width: 4px;
+  border-radius: 0;
+  color: #414756;
+  font-size: 14px;
+  font-weight: 400;
+}
+.alert.alert-danger {
+  background: rgba(255, 51, 51, 0.3);
+  border-color: #ff3333;
+}
+.alert.alert-info {
+  background: rgba(0, 156, 242, 0.3);
+  border-color: #009cf2;
+}
+.alert.alert-success {
+  background: rgba(0, 189, 121, 0.3);
+  border-color: #00bd79;
+}
+.alert.alert-warning {
+  background: rgba(240, 189, 0, 0.3);
+  border-color: #f0bd00;
+}
+
+/*#endregion -------------- Alert */
+/*#region ----------------- Payment Status */
+.form-status {
+  margin: 130px 0 50px 0;
+}
+.form-status .section-inner {
+  width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 2px;
+  border: 1px solid #dadde4;
+  padding: 40px;
+}
+.form-status .status-section {
+  display: none;
+  animation: swipeRightsmall 0.3s ease-in-out;
+}
+.form-status .status-section.active {
+  display: block;
+}
+.form-status .thumb {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.form-status .thumb.success {
+  background-image: url(../images/icons/icon-check.svg);
+}
+.form-status .thumb.error {
+  background-image: url(../images/icons/icon-error.svg);
+}
+.form-status .thumb.warning {
+  background-image: url(../images/icons/icon-warning.svg);
+}
+.form-status .title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5px;
+}
+.form-status .title.success {
+  color: #00bd79;
+}
+.form-status .title.error {
+  color: #ff3333;
+}
+.form-status .title.warning {
+  color: #f0bd00;
+}
+.form-status .status-list {
+  text-align: right;
+  border-top: 1px solid #dadde4;
+  padding-top: 10px;
+  margin-top: 20px;
+}
+.form-status .status-list li {
+  font-size: 16px;
+  font-weight: 400;
+  color: #414756;
+  margin: 8px 0;
+}
+.form-status .status-list li span {
+  color: #7a7e88;
+  margin-right: 5px;
+}
+.form-status .list-disc {
+  padding-right: 25px;
+  list-style: disc;
+  margin: 0 0 20px 0;
+}
+.form-status .list-disc li {
+  font-size: 14px;
+  font-weight: 400;
+  color: #414756;
+  margin: 5px 0;
+}
+.form-status .btns-action {
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .form-status {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .form-status .section-inner {
+    width: 100%;
+    padding: 20px;
+  }
+}
+@media (max-width: 575px) {
+  .form-status .section-inner {
+    padding: 12px;
+  }
+  .form-status .btns-action .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+/*#endregion -------------- Payment Status */

@@ -6,10 +6,23 @@
   border-right-width: 4px;
   border-radius: 0;
   color: $textDark;
+  font-size: 14px;
   font-weight: 400;
   &.alert-danger {
     background: rgba($color: $error, $alpha: 0.3);
     border-color: $error;
+  }
+  &.alert-info {
+    background: rgba($color: $info, $alpha: 0.3);
+    border-color: $info;
+  }
+  &.alert-success {
+    background: rgba($color: $success, $alpha: 0.3);
+    border-color: $success;
+  }
+  &.alert-warning {
+    background: rgba($color: $warning, $alpha: 0.3);
+    border-color: $warning;
   }
 }
 /*#endregion -------------- Alert */

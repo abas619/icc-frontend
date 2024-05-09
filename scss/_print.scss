@@ -1,10 +1,11 @@
 .form-register-print {
-  width: 210mm;
-  margin: 2rem auto 4rem auto;
-  background-color: white;
-  box-sizing: border-box;
   .inner {
+    width: 210mm;
+    margin: 2rem auto 4rem auto;
     padding: 10mm;
+    background-color: white;
+    box-sizing: border-box;
+    border: 1px solid $borderColor;
   }
   .print-head,
   .print-footer {
@@ -42,6 +43,7 @@
       font-weight: 800;
       margin-bottom: 2rem;
       color: $primary;
+      text-align: center;
     }
   }
   .inputgroup {
@@ -93,4 +95,19 @@
 .btns-print-action {
   text-align: center;
   margin: 30px 0;
+}
+
+@media (max-width: 992px) {
+  .form-register-print {
+    .inner {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .form-register-print {
+    .inner {
+      padding: 5mm;
+    }
+  }
 }

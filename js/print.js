@@ -42,20 +42,19 @@ function printPage() {
     }
   });
 
-  var textInline = document.querySelector(".text-inline");
-  var textLabel = textInline.querySelector(".input-label").innerText;
-  var textValue = textInline.querySelector(".input").value;
-  var textParagraph = textInline.querySelector("p").innerText;
   printWindow.document.write(
-    "<p>" +
-      textLabel +
-      " " +
-      "<h6 style='margin:0 10px'>" +
-      textValue +
+    "<div style='margin:1rem 0'>" +
+      "<h6>" +
+      "اینجانب" +
       "</h6>" +
+      "<p style='margin:0 10px'>" +
+      "............................." +
+      "</p>" +
       " " +
-      textParagraph +
-      "</p>"
+      "<h6>" +
+      "با مطالعه اساسنامه كمیته ایرانی اتاق بازرگانی بین‌المللی تقاضای عضویت در كمیته ایرانی را دارم ." +
+      "</h6>" +
+      "</div>"
   );
   printWindow.document.write(
     "<div style='margin-top:3mm;font-size:13px;font-weight: 800;'>تاریخ : </div>"

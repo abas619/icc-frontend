@@ -1,5 +1,5 @@
 /*#region ----------------- Payment Status */
-.payment-status {
+.form-status {
   margin: 130px 0 50px 0;
   .section-inner {
     width: 600px;
@@ -8,6 +8,13 @@
     border-radius: 2px;
     border: 1px solid $borderColor;
     padding: 40px;
+  }
+  .status-section {
+    display: none;
+    animation: swipeRightsmall 0.3s ease-in-out;
+    &.active {
+      display: block;
+    }
   }
   .thumb {
     width: 80px;
@@ -40,16 +47,11 @@
       color: $warning;
     }
   }
-  p {
-    margin: 15px 0;
-    font-size: 14px;
-    text-align: center;
-    color: $textGrey;
-  }
-  ul {
-    text-align: center;
+  .status-list {
+    text-align: right;
     border-top: 1px solid $borderColor;
-    padding-top: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
     li {
       font-size: 16px;
       font-weight: 400;
@@ -61,19 +63,29 @@
       }
     }
   }
+  .list-disc {
+    padding-right: 25px;
+    list-style: disc;
+    margin: 0 0 20px 0;
+    li {
+      font-size: 14px;
+      font-weight: 400;
+      color: $textDark;
+      margin: 5px 0;
+    }
+  }
   .btns-action {
     text-align: center;
-    margin-top: 20px;
   }
 }
 
 @media (max-width: 992px) {
-  .payment-status {
+  .form-status {
     margin-top: 110px;
   }
 }
 @media (max-width: 768px) {
-  .payment-status {
+  .form-status {
     .section-inner {
       width: 100%;
       padding: 20px;
@@ -81,10 +93,17 @@
   }
 }
 @media (max-width: 575px) {
-  .payment-status {
+  .form-status {
     .section-inner {
       padding: 12px;
     }
+    .btns-action {
+      .btn {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
   }
 }
+
 /*#endregion -------------- Payment Status */

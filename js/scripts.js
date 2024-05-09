@@ -119,3 +119,12 @@ if (document.querySelector(".buttons-language") != null) {
     body.classList.remove("ltr");
   };
 }
+
+function changeFormStatus(n) {
+  // var form_status_section = document.getElementById("form-status-section");
+  var formGroup = document.querySelectorAll(".status-section");
+  for (var i = 0; i < formGroup.length; i++) {
+    formGroup[i].classList.remove("active");
+  }
+  formGroup[n].classList.add("active");
+}
