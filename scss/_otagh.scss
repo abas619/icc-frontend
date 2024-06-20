@@ -1,0 +1,63 @@
+/*#region ----------------- Otagh */
+.card-otagh {
+  .card-inner {
+    background-color: white;
+    border: 1px solid $borderColor;
+    padding: 20px 10px;
+    border-radius: 5px;
+  }
+  .thumb {
+    width: 100px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .info {
+    margin-top: 10px;
+    text-align: center;
+    h2 {
+      font-size: 16px;
+      text-align: center;
+      @include textTruncate(1);
+    }
+    .link {
+      a {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: $primary;
+        .fi {
+          margin-right: 5px;
+          font-size: 18px;
+          position: relative;
+          top: 5px;
+        }
+      }
+    }
+  }
+}
+.swiper-otagh {
+}
+
+@media (max-width: 768px) {
+  .card-otagh {
+    .thumb {
+      width: 70px;
+    }
+    .info {
+      h2 {
+        font-size: 14px;
+      }
+      .link {
+        a {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+/*#endregion -------------- Otagh */

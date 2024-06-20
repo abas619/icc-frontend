@@ -47,3 +47,31 @@ var swiperCommissions = new Swiper(".swiper-commissions", {
     },
   },
 });
+var swiperOtagh = new Swiper(".swiper-otagh", {
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    250: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 5,
+    },
+  },
+});

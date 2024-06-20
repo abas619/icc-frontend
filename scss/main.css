@@ -1621,17 +1621,6 @@ input[type=number] {
   .page-title .see-more-link .text {
     display: none;
   }
-  .page-title .see-more-link .icon {
-    width: 38px;
-    height: 38px;
-    background-color: #007ddf;
-    border-radius: 50%;
-    color: white;
-  }
-  .page-title .see-more-link .icon .fi {
-    margin: 0;
-    font-size: 24px;
-  }
 }
 /*#endregion ----------------- Page Title */
 /*#region ----------------- Cards */
@@ -2966,7 +2955,7 @@ input[type=number] {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left center;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: -1;
 }
 .page-section .section-inner {
@@ -3275,6 +3264,12 @@ input[type=number] {
   flex: 1 0 100%;
   width: 100%;
 }
+#products-section .products-list .card-otagh {
+  flex: 0 0 33.33%;
+  width: 33.33%;
+  padding-left: 15px;
+  margin-bottom: 15px;
+}
 
 .filterside-overlay {
   position: fixed;
@@ -3453,6 +3448,9 @@ input[type=number] {
 }
 .side-box .box-body .see-more .btn-seeMore-list.active::before {
   content: "\f1ff";
+}
+.side-box .box-body .form-check {
+  margin-bottom: 10px;
 }
 .side-box.side-collapse {
   padding-top: 10px;
@@ -3666,6 +3664,13 @@ input[type=number] {
   margin-right: 10px;
 }
 
+@media (max-width: 1199px) {
+  #products-section .products-list .card-otagh {
+    flex: 0 0 50%;
+    width: 50%;
+    padding-left: 15px;
+  }
+}
 @media (max-width: 992px) {
   #products-section {
     padding-top: 20px;
@@ -3722,6 +3727,10 @@ input[type=number] {
   }
 }
 @media (max-width: 575px) {
+  #products-section .products-list .card-otagh {
+    padding-left: 10px;
+    margin-bottom: 10px;
+  }
   .payment-over .inner {
     flex-direction: column;
   }
@@ -3753,6 +3762,11 @@ input[type=number] {
   #products-section .sort-content .btn-advanced-search,
   #products-section .sort-content .btn-sort {
     width: 100%;
+  }
+  #products-section .products-list .card-otagh {
+    flex: 0 0 100%;
+    width: 100%;
+    padding-left: 0;
   }
   #products-section .products-side {
     width: 100%;
@@ -7130,3 +7144,58 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Payment Status */
+/*#region ----------------- Otagh */
+.card-otagh .card-inner {
+  background-color: white;
+  border: 1px solid #dadde4;
+  padding: 20px 10px;
+  border-radius: 5px;
+}
+.card-otagh .thumb {
+  width: 100px;
+  margin: 0 auto;
+}
+.card-otagh .thumb img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.card-otagh .info {
+  margin-top: 10px;
+  text-align: center;
+}
+.card-otagh .info h2 {
+  font-size: 16px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.card-otagh .info .link a {
+  display: inline-block;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #007ddf;
+}
+.card-otagh .info .link a .fi {
+  margin-right: 5px;
+  font-size: 18px;
+  position: relative;
+  top: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-otagh .thumb {
+    width: 70px;
+  }
+  .card-otagh .info h2 {
+    font-size: 14px;
+  }
+  .card-otagh .info .link a {
+    font-size: 12px;
+  }
+}
+/*#endregion -------------- Otagh */
