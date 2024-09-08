@@ -230,6 +230,10 @@ body.ltr {
         }
       }
     }
+    .price {
+      margin-left: 0;
+      margin-right: 20px;
+    }
   }
   @media (max-width: 575px) {
     .card-course .info {

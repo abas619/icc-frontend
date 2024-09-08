@@ -190,6 +190,10 @@ body.ltr .card-course .info {
 body.ltr .card-course .info ul li .fi {
   margin: 0 5px 0 0;
 }
+body.ltr .card-course .price {
+  margin-left: 0;
+  margin-right: 20px;
+}
 @media (max-width: 575px) {
   body.ltr .card-course .info {
     padding: 10px 0 0 0;
@@ -1700,7 +1704,7 @@ input[type=number] {
   background-color: white;
   border-radius: 2px;
   border: 1px solid #dadde4;
-  padding: 15px;
+  padding: 10px;
   display: grid;
   grid-template-columns: 120px auto;
   position: relative;
@@ -1729,7 +1733,7 @@ input[type=number] {
   transition: all 0.3s ease-in;
 }
 .card-course .info {
-  padding: 5px 15px 50px 0;
+  padding: 5px 15px 0 0;
 }
 .card-course .info h3 {
   font-size: 16px;
@@ -1760,9 +1764,7 @@ input[type=number] {
   color: #7a7e88;
 }
 .card-course .download-link {
-  position: absolute;
-  left: 15px;
-  bottom: 15px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -2957,6 +2959,12 @@ input[type=number] {
   background-position: left center;
   opacity: 0.2;
   z-index: -1;
+}
+.page-section.normal-margin {
+  margin: 50px 0;
+}
+.page-section.normal-margin .section-inner {
+  margin-top: 30px;
 }
 .page-section .section-inner {
   margin-top: 40px;
@@ -4645,8 +4653,12 @@ input[type=number] {
 .page-header.education {
   background-image: url(../images/page-header-education.jpg);
 }
+.page-header.search {
+  background-image: url(../images/page-header-search.jpg);
+  background-position: center center;
+}
 .page-header .header-inner {
-  background: linear-gradient(90deg, rgba(0, 69, 121, 0.5), #1297ff);
+  background: linear-gradient(90deg, rgba(0, 69, 121, 0.4), #007ddf);
   position: relative;
   padding: 4rem 0;
 }
@@ -7199,3 +7211,9 @@ input[type=number] {
   }
 }
 /*#endregion -------------- Otagh */
+/*#region ----------------- Search Result */
+.search-result-section {
+  margin: 50px 0 80px 0;
+}
+
+/*#endregion -------------- Search Result */
