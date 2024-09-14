@@ -109,15 +109,36 @@ if (document.querySelector(".user-dashboard-section") != null) {
 
 // Change Language Direction
 if (document.querySelector(".buttons-language") != null) {
-  const btnLang_eng = document.getElementById("btn-lang-eng");
-  const btnLang_fa = document.getElementById("btn-lang-fa");
+  const btnLangEng = document.getElementById("btn-lang-eng");
+  const btnLangFa = document.getElementById("btn-lang-fa");
+  // رویداد برای دکمه فارسی
+  btnLangFa.addEventListener("click", function (event) {
+    event.preventDefault();
+    changeLanguage("fa");
+    btnLangFa.classList.add("active");
+    btnLangEng.classList.remove("active");
+  });
 
-  btnLang_eng.onclick = () => {
-    body.classList.add("ltr");
-  };
-  btnLang_fa.onclick = () => {
+  // رویداد برای دکمه انگلیسی
+  btnLangEng.addEventListener("click", function (event) {
+    event.preventDefault();
+    changeLanguage("en");
+    btnLangFa.classList.remove("active");
+    btnLangEng.classList.add("active");
+  });
+}
+function changeLanguage(language) {
+  if (language === "fa") {
+    // تغییرات لازم برای فارسی
+    document.documentElement.setAttribute("lang", "fa");
+    document.body.dir = "rtl";
     body.classList.remove("ltr");
-  };
+  } else if (language === "en") {
+    // تغییرات لازم برای انگلیسی
+    document.documentElement.setAttribute("lang", "en");
+    document.body.dir = "ltr";
+    body.classList.add("ltr");
+  }
 }
 
 function changeFormStatus(n) {

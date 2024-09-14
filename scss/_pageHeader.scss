@@ -11,6 +11,11 @@
     background-image: url(../images/page-header-search.jpg);
     background-position: center center;
   }
+  &.text-center {
+    .text-content {
+      text-align: center;
+    }
+  }
   .header-inner {
     background: linear-gradient(90deg, rgba(0, 69, 121, 0.4), $primary);
     position: relative;
@@ -20,10 +25,45 @@
     text-align: right;
     position: relative;
     z-index: 20;
-    h1 {
+    h1,
+    h2 {
       color: white;
       margin-bottom: 0;
       font-size: 24px;
+    }
+  }
+  .search-content {
+    margin-top: 30px;
+    .inner {
+      position: relative;
+      width: 600px;
+      margin: 0 auto;
+    }
+    .input-search {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      .input {
+        width: 100%;
+        border-radius: 0;
+        border: 1px solid $borderColor;
+        padding: 12px 15px;
+        font-size: 16px;
+        font-weight: 500;
+        color: $textDark;
+      }
+      .btn-search {
+        background-color: $primary;
+        border-radius: 0;
+        border: 1px solid rgba($color: white, $alpha: 1);
+        border-right: none;
+        padding: 5px 15px;
+        color: white;
+        font-size: 22px;
+        @include displayFlex(flex, center, center);
+        .fi {
+          display: flex;
+        }
+      }
     }
   }
   .mybreadcrumb {
@@ -50,8 +90,14 @@
     }
     .text-content {
       // width: 90%;
-      h1 {
+      h1,
+      h2 {
         font-size: 22px;
+      }
+    }
+    .search-content {
+      .inner {
+        width: 100%;
       }
     }
   }
@@ -62,7 +108,8 @@
       padding: 3rem 0 4rem 0;
     }
     .text-content {
-      h1 {
+      h1,
+      h2 {
         font-size: 20px;
       }
     }
@@ -71,7 +118,8 @@
 @media (max-width: 575px) {
   .page-header {
     .text-content {
-      h1 {
+      h1,
+      h2 {
         font-size: 1.2rem;
       }
     }
